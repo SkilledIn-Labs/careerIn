@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
+
 	@RequestMapping("/")
 	public String home() {
 		return "index";
@@ -23,4 +24,5 @@ public class HomeController {
 	public Principal user(Principal principal) {
 		return principal;
 	}
+
 }
