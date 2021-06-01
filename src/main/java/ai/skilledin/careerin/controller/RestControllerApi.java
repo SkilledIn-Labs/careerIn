@@ -18,6 +18,7 @@ import ai.skilledin.careerin.dao.SubjectDao;
 import ai.skilledin.careerin.dao.UserDao;
 import ai.skilledin.careerin.models.Authorities;
 import ai.skilledin.careerin.models.RegisterUser;
+import ai.skilledin.careerin.models.RoleModel;
 import ai.skilledin.careerin.models.Subject;
 
 @RestController
@@ -58,6 +59,13 @@ public class RestControllerApi {
 		logger.info("Subject List " + findAll);
 
 		return findAll;
+	}
+
+	@PostMapping("/api/predict")
+	public Response predict(@RequestBody RoleModel obj) {
+		logger.info("" + obj);
+		return Response.status(201).entity("test").build();
+
 	}
 
 }
