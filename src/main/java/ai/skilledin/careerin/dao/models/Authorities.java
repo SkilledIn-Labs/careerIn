@@ -1,4 +1,4 @@
-package ai.skilledin.careerin.models;
+package ai.skilledin.careerin.dao.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

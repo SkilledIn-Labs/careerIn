@@ -159,7 +159,7 @@ uri="http://www.springframework.org/tags"%>
 				<input
 				  type="number"
 				  name="q10"
-				  id="10"
+				  id="q10"
 				  placeholder="Enter a valid hour"
 				  min="0"
 				  max="24"
@@ -171,7 +171,7 @@ uri="http://www.springframework.org/tags"%>
 				<input
 				  type="number"
 				  name="q11"
-				  id="11"
+				  id="q11"
 				  placeholder="Enter a valid number"
 				  min="1"
 				  max="10"
@@ -185,7 +185,7 @@ uri="http://www.springframework.org/tags"%>
 				<input
 				  type="number"
 				  name="q12"
-				  id="12"
+				  id="q12"
 				  placeholder="Enter a valid number"
 				  min="0"
 				  max="100"
@@ -199,7 +199,7 @@ uri="http://www.springframework.org/tags"%>
 				<input
 				  type="number"
 				  name="q13"
-				  id="113"
+				  id="q13"
 				  placeholder="out of 10"
 				  min="0"
 				  max="100"
@@ -233,7 +233,7 @@ uri="http://www.springframework.org/tags"%>
 				<label for="q15">can work long time before system?</label>
 				<select name="q15" id="q15">
 				  <option disabled selected>SELECT</option>
-				  <option name = "yes" value="YES">YES</option>
+				  <option name = "yes" value="yes">YES</option>
 				  <option name = "no" value="no">NO</option>
 				</select>
 			  </div>
@@ -241,7 +241,7 @@ uri="http://www.springframework.org/tags"%>
 				<label for="q16"> self-learning capability?</label>
 				<select name="q16" id="q16">
 				  <option disabled selected>SELECT</option>
-				  <option name = "yes" value="YES">YES</option>
+				  <option name = "yes" value="yes">YES</option>
 				  <option name = "no" value="no">NO</option>
 				</select>
 			  </div>
@@ -300,7 +300,7 @@ uri="http://www.springframework.org/tags"%>
 				<label for="q22">reading and writing skills</label>
 				<select name="q22" id="q22">
 				  <option disabled selected>SELECT</option>
-				  <option name = "poor" value="yes">poor</option>
+				  <option name = "poor" value="poor">poor</option>
 				  <option name = "medium" value="medium">medium</option>
 				  <option name = "excellent" value="excellent">excellent</option>
 				</select>
@@ -309,7 +309,7 @@ uri="http://www.springframework.org/tags"%>
 				<label for="q23">memory capability score</label>
 				<select name="q23" id="q23">
 				  <option disabled selected>SELECT</option>
-				  <option name = "poor" value="yes">poor</option>
+				  <option name = "poor" value="poor">poor</option>
 				  <option name = "medium" value="medium">medium</option>
 				  <option name = "excellent" value="excellent">excellent</option>
 				</select>
@@ -493,6 +493,61 @@ uri="http://www.springframework.org/tags"%>
       $('#second-form').toggle();
 	  $('#third-form').toggle();
 	  $('#fourth-form').toggle();
+	  
+ var fillData = {
+        url: '/api/fillData',
+        method: 'GET',
+        timeout: 0,
+        headers: {
+          Accept: 'application/json',
+        },
+      };
+
+      $.ajax(fillData).done(function (response) {
+		  var i=0;
+        $.each(response, function (key, value) {
+			if(response[i].qid=='q18'){
+				$('#q18').append(
+           		$('<option></option>').attr('value', response[i].answers).text(response[i].answers)
+         	 	);
+			}
+			
+			
+			if(response[i].qid=='q19'){
+				$('#q19').append(
+            $('<option></option>').attr('value', response[i].answers).text(response[i].answers)
+          );
+			}
+			if(response[i].qid=='q24'){
+				$('#q24').append(
+            $('<option></option>').attr('value', response[i].answers).text(response[i].answers)
+          );
+			}
+
+			if(response[i].qid=='q25'){
+				$('#q25').append(
+            $('<option></option>').attr('value', response[i].answers).text(response[i].answers)
+          );
+			}
+			if(response[i].qid=='q27'){
+				$('#q27').append(
+            $('<option></option>').attr('value', response[i].answers).text(response[i].answers)
+          );
+			}
+			if(response[i].qid=='q30'){
+				$('#q30').append(
+            $('<option></option>').attr('value', response[i].answers).text(response[i].answers)
+          );
+			}
+			i=i+1;
+
+        });
+
+		
+
+      });
+
+
      
     });
 
@@ -513,7 +568,7 @@ uri="http://www.springframework.org/tags"%>
 
 
 	$('#submit').click(function () {
-		var settings = {
+		var predict = {
   "url": "/api/predict",
   "method": "POST",
   "timeout": 0,
@@ -563,8 +618,9 @@ uri="http://www.springframework.org/tags"%>
   }),
 };
 
-$.ajax(settings).done(function (response) {
+$.ajax(predict).done(function (response) {
   console.log(response);
+  window.location.href = "/thankyou.jsp";
 });
 
     });

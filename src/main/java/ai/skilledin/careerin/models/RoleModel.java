@@ -2,6 +2,7 @@ package ai.skilledin.careerin.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,8 +10,8 @@ import javax.persistence.Table;
 @Table(name = "role_model_predictions", schema = "public")
 public class RoleModel {
 	@Id
-	@GeneratedValue
-	private Long Id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer Id;
 
 	private Integer q1;
 	private Integer q2;
@@ -52,11 +53,11 @@ public class RoleModel {
 	private String q38;
 	private String role_id;
 
-	public Long getId() {
+	public Integer getId() {
 		return Id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		Id = id;
 	}
 

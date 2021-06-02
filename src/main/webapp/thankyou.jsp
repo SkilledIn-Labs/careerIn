@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +42,7 @@
 									<div class="survey-form-field">
 										<div class="survey-thankyou">
 											<img src="assets/img/chth.png" alt="">
+											<h1>"${roleName}"</h1>
 											<p>Your submission has been received</p>
 											<h2>Thankyou For Survey</h2>
 										</div>

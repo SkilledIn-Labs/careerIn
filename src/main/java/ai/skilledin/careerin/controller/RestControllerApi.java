@@ -2,6 +2,7 @@ package ai.skilledin.careerin.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.core.Response;
 
 import org.slf4j.Logger;
@@ -13,13 +14,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import ai.skilledin.careerin.automl.XGBoostUtils;
 import ai.skilledin.careerin.dao.AuthoritiesDao;
-import ai.skilledin.careerin.dao.SubjectDao;
+import ai.skilledin.careerin.dao.RoleModelDao;
+import ai.skilledin.careerin.dao.TrainingAnswersDao;
 import ai.skilledin.careerin.dao.UserDao;
-import ai.skilledin.careerin.models.Authorities;
-import ai.skilledin.careerin.models.RegisterUser;
+import ai.skilledin.careerin.dao.models.Authorities;
+import ai.skilledin.careerin.dao.models.RegisterUser;
+import ai.skilledin.careerin.dao.models.TrainingAnswers;
 import ai.skilledin.careerin.models.RoleModel;
-import ai.skilledin.careerin.models.Subject;
 
 @RestController
 public class RestControllerApi {
@@ -30,6 +33,12 @@ public class RestControllerApi {
 
 	@Autowired
 	private AuthoritiesDao roleDao;
+
+	@Autowired
+	private XGBoostUtils autoML;
+
+	@Autowired
+	private RoleModelDao roleModelDao;
 
 	@PostMapping("/api/register")
 	public Response register(@RequestBody RegisterUser user) {
@@ -49,23 +58,24 @@ public class RestControllerApi {
 	}
 
 	@Autowired
-	public SubjectDao subjectDao;
-
-	@GetMapping("/api/getSubjects")
-	public List<Subject> populateSubject() {
-		logger.info("Subject List called");
-
-		List<Subject> findAll = subjectDao.findAll();
-		logger.info("Subject List " + findAll);
-
-		return findAll;
-	}
+	public TrainingAnswersDao trainingAnswersDao;
 
 	@PostMapping("/api/predict")
-	public Response predict(@RequestBody RoleModel obj) {
-		logger.info("" + obj);
-		return Response.status(201).entity("test").build();
+	public Response predict(@RequestBody RoleModel roleModel, HttpSession session) {
+		logger.info("" + roleModel);
+		autoML.getRoleIdFromPredictionModel(roleModel);
+		session.setAttribute("roleId", roleModel.getRole_id());
+		String roleNameFromRoleId = autoML.getRoleNameFromRoleId(roleModel.getRole_id());
+		session.setAttribute("roleName", roleNameFromRoleId);
+		System.err.println("prediction --> " + roleNameFromRoleId);
+//		roleModelDao.save(roleModel);
+		return Response.status(200).entity(roleModel).build();
 
 	}
 
+	@GetMapping("/api/fillData")
+	public List<TrainingAnswers> fillData() {
+		return trainingAnswersDao.findAll();
+
+	}
 }
