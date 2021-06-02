@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "users", schema = "public")
-public class RegisterUser {
+public class User {
 	@Id
 	private String username;
 	private String password;

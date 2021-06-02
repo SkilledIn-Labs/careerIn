@@ -173,9 +173,13 @@ keyframes show { 0%, 49.99% {
 
 
 
+
+
 %
 ,
 100
+
+
 
 
 
@@ -227,6 +231,8 @@ opacity
 
 
 
+
+
 :
 
 
@@ -252,7 +258,11 @@ opacity
 
 
 
+
+
 1
+
+
 
 
 
@@ -301,6 +311,8 @@ z-index
 
 
 
+
+
 :
 
 
@@ -326,7 +338,11 @@ z-index
 
 
 
+
+
 5
+
+
 
 
 
@@ -465,8 +481,8 @@ footer a {
 	<h2>Sign Up / Login</h2>
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">
-			<form name='signup-form' action="#"
-				onsubmit="return submitSignUp(this)">
+			<form name='signup-form'
+				onsubmit="submitSignUp()">
 				<h1>Create Account</h1>
 				<div class="social-container">
 					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a> <a
@@ -537,7 +553,7 @@ function submitSignUp() {
 	var password = $("#password").val();
 
 	var settings = {
-  "url": "http://localhost:8080/api/register",
+  "url": "http://20.193.224.187:8080/api/register",
   "method": "POST",
   "timeout": 0,
   "headers": {

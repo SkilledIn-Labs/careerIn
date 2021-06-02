@@ -12,10 +12,13 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	@Autowired
+	AuthenticationSuccessHandler authenticationSuccessHandler;
 
 	@Autowired
 	private DataSource datasource;
@@ -34,9 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(final HttpSecurity http) throws Exception {
 		http.csrf().disable().authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/anonymous*")
 				.anonymous().antMatchers("/login*").permitAll().anyRequest().authenticated().and().formLogin()
-				.loginPage("/login.jsp").loginProcessingUrl("/perform_login").defaultSuccessUrl("/index.jsp", true)
-				.failureUrl("/login.jsp?error=true").and().logout().logoutUrl("/perform_logout")
-				.deleteCookies("JSESSIONID");
+				.loginPage("/login.jsp").successHandler(authenticationSuccessHandler)
+				.loginProcessingUrl("/perform_login").failureUrl("/login.jsp?error=true").and().logout()
+				.logoutUrl("/perform_logout").deleteCookies("JSESSIONID");
 	}
 
 	@Override

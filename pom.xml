@@ -12,7 +12,7 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>ai.skilledin</groupId>
-	<artifactId>careerIn</artifactId>
+	<artifactId>careerin</artifactId>
 	<version>0.1.0</version>
 	<packaging>war</packaging>
 	<name>careerIn</name>
@@ -137,34 +137,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>com.microsoft.azure</groupId>
-				<artifactId>azure-webapp-maven-plugin</artifactId>
-				<version>1.14.0</version>
-				<configuration>
-					<schemaVersion>v2</schemaVersion>
-					<subscriptionId>d77264e1-72a3-48bc-bc44-845e443bee92</subscriptionId>
-					<resourceGroup>careerIn-1622466564404-rg</resourceGroup>
-					<appName>careerIn-1622466564404</appName>
-					<pricingTier>B1</pricingTier>
-					<region>westeurope</region>
-					<runtime>
-						<os>Windows</os>
-						<javaVersion>Java 11</javaVersion>
-						<webContainer>Tomcat 9.0</webContainer>
-					</runtime>
-					<deployment>
-						<resources>
-							<resource>
-								<directory>${project.basedir}/target</directory>
-								<includes>
-									<include>*.war</include>
-								</includes>
-							</resource>
-						</resources>
-					</deployment>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

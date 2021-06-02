@@ -8,6 +8,7 @@ import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,7 @@ import ai.skilledin.careerin.dao.RoleModelDao;
 import ai.skilledin.careerin.dao.TrainingAnswersDao;
 import ai.skilledin.careerin.dao.UserDao;
 import ai.skilledin.careerin.dao.models.Authorities;
-import ai.skilledin.careerin.dao.models.RegisterUser;
+import ai.skilledin.careerin.dao.models.User;
 import ai.skilledin.careerin.dao.models.TrainingAnswers;
 import ai.skilledin.careerin.models.RoleModel;
 
@@ -41,7 +42,7 @@ public class RestControllerApi {
 	private RoleModelDao roleModelDao;
 
 	@PostMapping("/api/register")
-	public Response register(@RequestBody RegisterUser user) {
+	public Response register(@RequestBody User user) {
 		logger.info("sign up attempt username:" + user.getUsername());
 
 		user.setEnabled(true);
@@ -68,7 +69,7 @@ public class RestControllerApi {
 		String roleNameFromRoleId = autoML.getRoleNameFromRoleId(roleModel.getRole_id());
 		session.setAttribute("roleName", roleNameFromRoleId);
 		System.err.println("prediction --> " + roleNameFromRoleId);
-//		roleModelDao.save(roleModel);
+		roleModelDao.save(roleModel);
 		return Response.status(200).entity(roleModel).build();
 
 	}
@@ -77,5 +78,10 @@ public class RestControllerApi {
 	public List<TrainingAnswers> fillData() {
 		return trainingAnswersDao.findAll();
 
+	}
+
+	@GetMapping(value = "/api/username")
+	public String currentUserName(Authentication authentication) {
+		return authentication.getName();
 	}
 }

@@ -1,18 +1,23 @@
 package ai.skilledin.careerin.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "role_model_predictions", schema = "public")
 public class RoleModel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="role_model_prediction_seq")
+    @SequenceGenerator(name="role_model_prediction_seq", sequenceName="role_model_prediction_seq", allocationSize=1)
+    @Column(name = "id")
 	private Integer Id;
 
+	private String email;
 	private Integer q1;
 	private Integer q2;
 	private Integer q3;
@@ -382,6 +387,14 @@ public class RoleModel {
 				+ q24 + ", q25=" + q25 + ", q26=" + q26 + ", q27=" + q27 + ", q28=" + q28 + ", q29=" + q29 + ", q30="
 				+ q30 + ", q31=" + q31 + ", q32=" + q32 + ", q33=" + q33 + ", q34=" + q34 + ", q35=" + q35 + ", q36="
 				+ q36 + ", q37=" + q37 + ", q38=" + q38 + ", role_id=" + role_id + "]";
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
