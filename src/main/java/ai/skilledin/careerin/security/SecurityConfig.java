@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/api/**", "/favicon.ico");
+		web.ignoring().antMatchers("/api/**", "/favicon.ico", "/team.jsp", "/assets/**", "/assets/*", "/oauth**");
 	}
 
 	@Override
@@ -38,13 +38,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable().authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/anonymous*")
 				.anonymous().antMatchers("/login*").permitAll().anyRequest().authenticated().and().formLogin()
 				.loginPage("/login.jsp").successHandler(authenticationSuccessHandler)
-				.loginProcessingUrl("/perform_login").failureUrl("/login.jsp?error=true").and().logout()
-				.logoutUrl("/perform_logout").deleteCookies("JSESSIONID");
+				.loginProcessingUrl("/perform_login").failureUrl("/login.jsp?error=true").and().oauth2Login().and()
+				.logout().logoutUrl("/perform_logout").deleteCookies("JSESSIONID");
 	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.jdbcAuthentication().dataSource(datasource);
 	}
-
 }

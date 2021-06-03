@@ -26,8 +26,8 @@
                                     <a href="/oauth2/authorization/github" class="social"><i
                                         class="fab fa-github"></i></a>
                                     <a href="/oauth2/authorization/google" class="social"><i
-                                        class="fab fa-google-plus-g"></i></a> <a href="#" class="social"><i
-                                        class="fab fa-linkedin-in"></i></a> </div>
+                                        class="fab fa-google-plus-g"></i></a> <a href="/oauth2/authorization/linkdin" class="social"><i
+                                        class="fab fa-facebook-f"></i></a> </div>
                                 <span>or use your email for registration</span> <input type="text" placeholder="Name" name="name" id="name" /> <input type="email" placeholder="Email" name="email" id="email" /> <input type="password" name="password" placeholder="Password"
                                     id="password" />
                                 <button>Sign Up</button>
@@ -39,8 +39,8 @@
                                 <div class="social-container">
                                     <a href="/oauth2/authorization/github" class="social"><i
 						class="fab fa-github"></i></a> <a href="/oauth2/authorization/google" class="social"><i
-						class="fab fa-google-plus-g"></i></a> <a href="#" class="social"><i
-						class="fab fa-linkedin-in"></i></a>
+						class="fab fa-google-plus-g"></i></a> <a href="/oauth2/authorization/linkdin" class="social"><i
+						class="fab fa-facebook-f"></i></a>
                                 </div>
                                 <span>or use your account</span> <input type="email" name="username" placeholder="Email" /> <input type="password" name="password" placeholder="Password" /> <a href="#">Forgot your password?</a>
                                 <button>Sign In</button>
