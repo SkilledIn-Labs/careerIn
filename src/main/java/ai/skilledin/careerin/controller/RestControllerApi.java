@@ -22,8 +22,8 @@ import ai.skilledin.careerin.dao.TrainingAnswersDao;
 import ai.skilledin.careerin.dao.UserDao;
 import ai.skilledin.careerin.dao.models.Authorities;
 import ai.skilledin.careerin.dao.models.PredictionPOJO;
-import ai.skilledin.careerin.dao.models.User;
 import ai.skilledin.careerin.dao.models.TrainingAnswers;
+import ai.skilledin.careerin.dao.models.User;
 
 @RestController
 public class RestControllerApi {
@@ -68,7 +68,7 @@ public class RestControllerApi {
 		session.setAttribute("roleId", roleModel.getRole_id());
 		String roleNameFromRoleId = autoML.getRoleNameFromRoleId(roleModel.getRole_id());
 		session.setAttribute("roleName", roleNameFromRoleId);
-		System.err.println("prediction --> " + roleNameFromRoleId);
+		logger.info("prediction --> " + roleNameFromRoleId);
 		roleModelDao.save(roleModel);
 		return Response.status(200).entity(roleModel).build();
 

@@ -16,7 +16,7 @@
 	href="../../../../../../cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
 <link rel="stylesheet" href="assets/css/animate.min.css">
 <link rel="stylesheet" href="assets/css/fontawesome-all.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/thankyou.css">
 <body>
 	<div class="wrapper">
 		<div class="wizard-content-1 clearfix">
@@ -44,22 +44,17 @@
 											<img src="assets/img/chth.png" alt="">
 											<h1>"${roleName}"</h1>
 											<p>Your submission has been received</p>
-											<h2>Thankyou For Survey</h2>
+											<h2>ThankYou For Survey</h2>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="wizard-progress">
-							<span>4 of 4 Completed</span>
-							<div class="progress">
-								<div class="progress-bar" style="width: 100%"></div>
-							</div>
-						</div>
+						
 						<div class="actions">
 							<ul>
 								<li><span class="js-btn-prev" title="Previous"><a
-										href="index.html">Previous Question</a></span></li>
+										href="index.html">Go Back</a></span></li>
 							</ul>
 						</div>
 					</div>

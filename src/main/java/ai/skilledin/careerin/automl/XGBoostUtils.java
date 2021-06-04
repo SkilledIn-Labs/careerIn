@@ -41,6 +41,7 @@ public class XGBoostUtils {
 
 	public String getRoleNameFromRoleId(String role_id) {
 		Roles byId = rolesDao.getById(role_id);
+		logger.info("RoleID:" + byId.getRole_name());
 		return byId.getRole_name();
 	}
 
