@@ -1,4 +1,4 @@
-package ai.skilledin.careerin.models;
+package ai.skilledin.careerin.dao.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,14 +10,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "role_model_predictions", schema = "public")
-public class RoleModel {
+public class PredictionPOJO {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="role_model_prediction_seq")
-    @SequenceGenerator(name="role_model_prediction_seq", sequenceName="role_model_prediction_seq", allocationSize=1)
-    @Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "role_model_prediction_seq")
+	@SequenceGenerator(name = "role_model_prediction_seq", sequenceName = "role_model_prediction_seq", allocationSize = 1)
+	@Column(name = "id")
 	private Integer Id;
-
-	private String email;
+	private String email = "oAuth";
 	private Integer q1;
 	private Integer q2;
 	private Integer q3;

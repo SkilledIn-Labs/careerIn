@@ -21,9 +21,9 @@ import ai.skilledin.careerin.dao.RoleModelDao;
 import ai.skilledin.careerin.dao.TrainingAnswersDao;
 import ai.skilledin.careerin.dao.UserDao;
 import ai.skilledin.careerin.dao.models.Authorities;
+import ai.skilledin.careerin.dao.models.PredictionPOJO;
 import ai.skilledin.careerin.dao.models.User;
 import ai.skilledin.careerin.dao.models.TrainingAnswers;
-import ai.skilledin.careerin.models.RoleModel;
 
 @RestController
 public class RestControllerApi {
@@ -62,7 +62,7 @@ public class RestControllerApi {
 	public TrainingAnswersDao trainingAnswersDao;
 
 	@PostMapping("/api/predict")
-	public Response predict(@RequestBody RoleModel roleModel, HttpSession session) {
+	public Response predict(@RequestBody PredictionPOJO roleModel, HttpSession session) {
 		logger.info("" + roleModel);
 		autoML.getRoleIdFromPredictionModel(roleModel);
 		session.setAttribute("roleId", roleModel.getRole_id());

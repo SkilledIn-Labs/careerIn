@@ -1,11 +1,15 @@
 package ai.skilledin.careerin.automl;
 
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import ai.skilledin.careerin.dao.RolesDao;
+import ai.skilledin.careerin.dao.models.PredictionPOJO;
 import ai.skilledin.careerin.dao.models.Roles;
-import ai.skilledin.careerin.models.RoleModel;
 import hex.genmodel.MojoModel;
 import hex.genmodel.easy.EasyPredictModelWrapper;
 import hex.genmodel.easy.RowData;
@@ -13,9 +17,23 @@ import hex.genmodel.easy.prediction.MultinomialModelPrediction;
 
 @Component
 public class XGBoostUtils {
+	private static final Logger logger = LoggerFactory.getLogger(XGBoostUtils.class);
+
+	@Autowired(required = false)
+	EasyPredictModelWrapper model;
 
 	public XGBoostUtils() {
 		super();
+		String moelLocation = "/home/raj/ai-models/xgboost_dadee8ad_2654_4fb1_864f_c2a55c9b510c_XG_ROLE_ID.zip";
+
+		try {
+			model = new EasyPredictModelWrapper(MojoModel.load(moelLocation));
+			logger.info("successfully loaded the AI Model");
+		} catch (IOException e) {
+			logger.error("Error while loading AI Model");
+			e.printStackTrace();
+		}
+
 	}
 
 	@Autowired
@@ -26,12 +44,9 @@ public class XGBoostUtils {
 		return byId.getRole_name();
 	}
 
-	public String getRoleIdFromPredictionModel(RoleModel role) {
+	public String getRoleIdFromPredictionModel(PredictionPOJO role) {
 		String roleId = "Predictiong";
 		try {
-
-			EasyPredictModelWrapper model = new EasyPredictModelWrapper(MojoModel.load(
-					"C:\\Users\\raj00\\Documents\\Utkarsh\\automl\\role\\xgboost_dadee8ad_2654_4fb1_864f_c2a55c9b510c_XG_ROLE_ID.zip"));
 
 			MultinomialModelPrediction p;
 			RowData row = new RowData();
