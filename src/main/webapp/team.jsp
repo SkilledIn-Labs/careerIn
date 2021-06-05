@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>CodePen - Team member profile display</title>
+<title>CareerIn - Team member profile display</title>
 <link rel="stylesheet" href="assets\css\team.css">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -69,8 +69,7 @@
 										class="share-popup"><img
 										src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/Twitter_alt.png"
 										width="30px" height="30px"></a> <a
-										href="https://plusone.google.com/_/+1/confirm?hl=en&url=_URL_&title=_TITLE_
-"
+										href="https://plusone.google.com/_/+1/confirm?hl=en&url=_URL_&title=_TITLE_"
 										target="_blank" class="share-popup"><img
 										src="http://icons.iconarchive.com/icons/danleech/simple/512/google-plus-icon.png"
 										width="30px" height="30px"></a>
@@ -124,6 +123,32 @@
 				<div class="container">
 					<div class="row">
 
+
+						<!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="team-member">
+								<figure>
+									<img
+										src="https://skilledin.file.core.windows.net/pics/prof-a.jpeg?st=2021-06-04T11%3A53%3A51Z&se=2023-06-05T11%3A53%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=JZUlng0YTTR0IX%2FnC0eLoMMuVAcwarYMxKHaZYD85Uc%3D"
+										alt="" class="img-responsive pics">
+									<figcaption>
+										<p>Temporibus dolor, quisquam consectetur molestias,
+											veniam voluptatum. Beatae alias omnis totam.</p>
+										<ul>
+											<li><a href=""><i class="fab fa-github fa-2x"></i></a></li>
+											<li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
+											<li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+										</ul>
+									</figcaption>
+								</figure>
+								<h4>A Ranjith</h4>
+								<p>Prof in-charge</p>
+							</div>
+							<!-- /.team-member-->
+						</div>
+						<!-- /.col-md-4 -->
+
 						<div class="col-md-4">
 							<div class="team-member">
 								<figure>
@@ -131,12 +156,11 @@
 										src="https://skilledin.file.core.windows.net/pics/raj_full_stack.jpeg?st=2021-06-02T20%3A03%3A26Z&se=2023-06-03T20%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=LznuLVpoYXwZwspf8Rz4ZgcyQd1J0zjRiqpSEtEi%2FzU%3D"
 										alt="" class="img-responsive pics">
 									<figcaption>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-											elit. Recusandae asperiores mollitia.</p>
+										<p>Java Full stack Developer | Competitive Coder | Machine Learning</p>
 										<ul>
-											<li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+											<li><a href="https://www.github.com/theroyalraj/"><i class="fab fa-github fa-2x"></i></a></li>
+											<li><a href="https://wa.me/%2B917870455443"><i class="fab fa-whatsapp fa-2x"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/theroyalraj/"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
 										</ul>
 									</figcaption>
 								</figure>
@@ -154,17 +178,16 @@
 										src="https://skilledin.file.core.windows.net/pics/yash_webdeveloper_2.jpg?st=2021-06-02T20%3A03%3A47Z&se=2023-06-03T20%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=Kg6v3k5ebriSN1rTqF9iyQBU8zylgHkxllnjLQ1YtLE%3D"
 										alt="" class="img-responsive pics">
 									<figcaption>
-										<p>Neque minima ea, a praesentium saepe nihil maxime quod
-											esse numquam explicabo eligendi.</p>
+										<p>JAVA | JavaScript | Node.js | OAuth | MongoDB</p>
 										<ul>
-											<li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+											<li><a href="https://www.github.com/yashrockstar/"><i class="fab fa-github fa-2x"></i></a></li>
+											<li><a href="https://wa.me/%2B919304328315"><i class="fab fa-whatsapp fa-2x"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/yashwant-narayan-27447b1bb"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
 										</ul>
 									</figcaption>
 								</figure>
 								<h4>Yahshwant Narayan</h4>
-								<p>UI/UX Designer</p>
+								<p>Full Stack developer</p>
 							</div>
 							<!-- /.team-member-->
 						</div>
@@ -177,12 +200,11 @@
 										src="https://skilledin.file.core.windows.net/pics/sid.JPG?st=2021-06-02T20%3A03%3A02Z&se=2023-06-03T20%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=%2BFemDIxJ3txMIA5o69C07BwTKGIbpogwhJvTdd0%2BdQ8%3D"
 										alt="" class="img-responsive pics">
 									<figcaption>
-										<p>Temporibus dolor, quisquam consectetur molestias,
-											veniam voluptatum. Beatae alias omnis totam.</p>
+										<p>Computer Science Engineering Undegraduate</p>
 										<ul>
-											<li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+											<li><a href=""><i class="fab fa-github fa-2x"></i></a></li>
+											<li><a href="https://wa.me/%2B919431798010"><i class="fab fa-whatsapp fa-2x"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/sidharth19th"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
 										</ul>
 									</figcaption>
 								</figure>
@@ -203,17 +225,16 @@
 										src="https://skilledin.file.core.windows.net/pics/soda.jpeg?st=2021-06-02T20%3A00%3A29Z&se=2023-12-03T20%3A00%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=Y5EU5KLeEcS21pY%2BMDUWx7s5A1SQpeA%2FJXbdXSdxEjI%3D"
 										alt="" class="img-responsive pics">
 									<figcaption>
-										<p>Temporibus dolor, quisquam consectetur molestias,
-											veniam voluptatum. Beatae alias omnis totam.</p>
+										<p>Video Editor at The Earthen One </p>
 										<ul>
-											<li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+											<li><a href="https://github.com/SODA110"><i class="fab fa-github fa-2x"></i></a></li>
+											<li><a href="https://wa.me/%2B917294002933"><i class="fab fa-whatsapp fa-2x"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/sodagar-hembrom-4363041aa"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
 										</ul>
 									</figcaption>
 								</figure>
 								<h4>Sodagar Hemberom</h4>
-								<p>Web Developer</p>
+								<p>Front-End Developer</p>
 							</div>
 							<!-- /.team-member-->
 						</div>
@@ -230,9 +251,9 @@
 										<p>Temporibus dolor, quisquam consectetur molestias,
 											veniam voluptatum. Beatae alias omnis totam.</p>
 										<ul>
-											<li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+											<li><a href=""><i class="fab fa-github fa-2x"></i></a></li>
+											<li><a href="https://wa.me/%2B918294158565"><i class="fab fa-whatsapp fa-2x"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/sonu-tudu-9328821b2"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
 										</ul>
 									</figcaption>
 								</figure>
@@ -243,30 +264,7 @@
 						</div>
 						<!-- /.col-md-4 -->
 
-						<!-- /.col-md-4 -->
 
-						<div class="col-md-4">
-							<div class="team-member">
-								<figure>
-									<img
-										src="https://skilledin.file.core.windows.net/pics/prof.jpeg?st=2021-06-02T20%3A02%3A22Z&se=2023-12-03T20%3A02%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=igMSpXnplSAdDP1pZutysjiE45ZfTm4Srpm5gSXLR0Q%3D"
-										alt="" class="img-responsive pics">
-									<figcaption>
-										<p>Temporibus dolor, quisquam consectetur molestias,
-											veniam voluptatum. Beatae alias omnis totam.</p>
-										<ul>
-											<li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
-											<li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
-										</ul>
-									</figcaption>
-								</figure>
-								<h4>A Ranjith</h4>
-								<p>Prof in-charge</p>
-							</div>
-							<!-- /.team-member-->
-						</div>
-						<!-- /.col-md-4 -->
 
 
 					</div>

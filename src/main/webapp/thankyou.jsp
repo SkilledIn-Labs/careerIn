@@ -5,7 +5,6 @@
 <html lang="en">
 
 
-<!-- Mirrored from jthemes.net/themes/html/BeWizard/Survey/Survey.V1/thank-you.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 May 2021 10:15:03 GMT -->
 <head>
 <meta charset="utf-8">
 <title>Survey V1</title>
@@ -32,7 +31,7 @@
 					<div class="wizard-forms">
 						<div class="survey-content-area survey-content-two">
 							<div class="survey-top-title text-center position-relative">
-								<h2>What is your First reactiong To the product</h2>
+								<h2>Your Results are here...</h2>
 							</div>
 							<div class="survey-form-area clearfix">
 								<div class="survey-form-content">

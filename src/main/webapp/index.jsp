@@ -125,7 +125,7 @@
 
 	<header>
 		<h1 id="title">Role Predictor</h1>
-		<p id="description">Enter your marks for respective subjects.</p>
+		<p id="description">Rate Yourself in these respective subjects.</p>
 		<input type="hidden" id="hdnSession"
 			data-value=" ${sessionScope.userName}" />
 
@@ -136,29 +136,29 @@
 		<div class="form-column">
 			<div class="email">
 				<label for="q1" id="name-label">Operating Systems</label> <input
-					type="text" name="q1" id="q1" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q1" id="q1" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 			<div class="algo">
 				<label for="q2" id="name-label">Algorithms</label> <input
-					type="text" name="q2" id="q2" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q2" id="q2" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 			<div class="pc">
 				<label for="q3" id="name-label">Programming Concepts</label> <input
-					type="text" name="q3" id="q3" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q3" id="q3" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 			<div class="se">
 				<label for="q4" id="name-label">Software Engineering</label> <input
-					type="text" name="q4" id="q4" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q4" id="q4" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 
 			<div class="cn">
 				<label for="q5" id="name-label">Computer Networks</label> <input
-					type="text" name="q5" id="q5" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q5" id="q5" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 
 			<!--
@@ -172,26 +172,26 @@
 		<div class="form-column">
 			<div class="elect">
 				<label for="q6" id="name-label">Electronics Subjects</label> <input
-					type="text" name="q6" id="q6" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q6" id="q6" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 
 			<div class="cn">
 				<label for="q7" id="name-label">Computer Architecture</label> <input
-					type="text" name="q7" id="q7" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q7" id="q7" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 
 			<div class="cn">
 				<label for="q8" id="name-label">Mathematics</label> <input
-					type="text" name="q8" id="q8" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q8" id="q8" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 
 			<div class="cn">
 				<label for="q9" id="name-label">Communication Skills</label> <input
-					type="text" name="q9" id="q9" placeholder="% out of 100"
-					autocomplete="nope" required />
+					type="text" name="q9" id="q9" placeholder="out of 10"
+					min="0" max="10" autocomplete="nope" required />
 			</div>
 
 
@@ -212,7 +212,7 @@
 			<div class="number">
 				<label for="q11" id="number-label">How would you rate
 					yourself in Logical quotient</label> <input type="number" name="q11"
-					id="q11" placeholder="Enter a valid number" min="1" max="10"
+					id="q11" placeholder="out of 10" min="1" max="10"
 					required />
 			</div>
 
@@ -231,7 +231,7 @@
 			</div>
 
 			<div class="number">
-				<label for="q14" id="number-label">Public Speaking Points</label> <input
+				<label for="q14" id="number-label">Public Speaking Rating</label> <input
 					type="number" name="q14" id="q14" placeholder="out of 10" min="0"
 					max="10" required />
 			</div>
