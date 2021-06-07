@@ -93,71 +93,12 @@ $(function() {
         }
     };
 
-    var chart = new ApexCharts(document.querySelector("#appointment_overview"), options);
-    chart.render();
+   // var chart = new ApexCharts(document.querySelector("#appointment_overview"), options);
+   // chart.render();
 
 
 
 
-    var options = {
-        series: [{
-                name: "New Patient",
-                data: [28, 15, 30, 18, 35, 13, 43]
-            },
-            {
-                name: "Return Patient",
-                data: [10, 39, 20, 36, 15, 32, 17]
-            }
-        ],
-        chart: {
-            height: 200,
-            type: 'line',
-            toolbar: {
-                show: false
-            }
-        },
-        colors: ['#ee3158', '#1dbfc1'],
-        dataLabels: {
-            enabled: false,
-        },
-        stroke: {
-            curve: 'smooth'
-        },
-        grid: {
-            show: false,
-        },
-        xaxis: {
-            categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Set', 'Sun'],
-        },
-        legend: {
-            show: true,
-        },
-        xaxis: {
-            axisBorder: {
-                show: false
-            },
-            axisTicks: {
-                show: false,
-            },
-            labels: {
-                show: false,
-            }
-        },
-        yaxis: {
-            axisBorder: {
-                show: false
-            },
-            axisTicks: {
-                show: false,
-            },
-            labels: {
-                show: false,
-            }
-        },
-    };
-
-    var chart = new ApexCharts(document.querySelector("#patients_pace"), options);
-    chart.render();
 
 
 

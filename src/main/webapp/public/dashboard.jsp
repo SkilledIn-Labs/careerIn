@@ -207,22 +207,36 @@
 		<%
 		PredictionResponseWrapper prediction = (PredictionResponseWrapper) session.getAttribute("prediction");
 		String[] names = new String[100];
-		String[] values = new String[100];
+		Double[] values = new Double[100];
 		String[] img = new String[100];
-		System.out.println(prediction);
+
+		Double sum3 = 0D;
+		Double others=0D;
+		//System.out.println(prediction);
 		if (prediction != null) {
+			Double sum=0D;
+			Double temp=0D;
 			for (int i = 0; i < prediction.getRoleName().size(); i++) {
 				names[i] = prediction.getRoleName().get(i).getRole_name();
-				values[i] = String.format("%.2f", prediction.getValues().get(i) * 100);
+				values[i] = Double.parseDouble(String.format("%.2f", prediction.getValues().get(i) * 100));
 				img[i] = prediction.getRoleName().get(i).getImg();
+				
+				sum+=values[i];
+				if(i<=9){
+					temp+=values[i];
+				}
 			}
+			sum3 = values[0] + values[1] + values[2];
+			others = sum-temp;
 		} else {
 			for (int i = 0; i < 100; i++) {
 				names[i] = "_blank";
-				values[i] = "0.00";
+				values[i] = 0D;
 				img[i] = "https://www.endivesoftware.com/wp-content/uploads/2019/08/hybrid-application.svg";
 
 			}
+			sum3 = 0D;
+			others=0D;
 		}
 		%>
 		<!-- Content Wrapper. Contains page content -->
@@ -330,6 +344,16 @@
 							</div>
 						</div>
 						<div class="row">
+						<div class="col-xl-12 col-12">
+								<div class="box">
+									<div class="box-body analytics-info">
+										<h4 class="box-title">Nested Pie Chart</h4>
+										<div id="nested-pie" style="height: 400px;"></div>
+									</div>
+								</div>
+							</div>
+						
+						
 							<div class="col-xl-6 col-12">
 								<div class="box">
 									<div class="box-header">
@@ -382,16 +406,9 @@
 							</div>
 
 
-							<div class="col-xl-6 col-12">
-								<div class="box">
-									<div class="box-header">
-										<h4 class="box-title">Overal appointment</h4>
-									</div>
-									<div class="box-body">
-										<div id="appointment_overview"></div>
-									</div>
-								</div>
-							</div>
+							
+
+
 							<div class="col-xl-6 col-12">
 								<div class="box">
 									<div class="box-header">
@@ -848,8 +865,15 @@
 
 	<!-- Rhythm Admin App -->
 	<script src="public/js/template.js"></script>
-	<script src="public/js/pages/dashboard2.js"></script>
+	<!-- 
+	<script src="public/js/pages/dashboard2.js"></script> 
+
+	<script src="public/js/pages/echart-pie-doghnut.js"></script>-->
+	<script src="/assets/vendor_components/echarts/dist/echarts.js"></script>
+
 	<script type="text/javascript">
+	
+	
 
 var options = {
         series: [<%=values[0]%>, <%=values[1]%>, <%=values[2]%>],
@@ -874,7 +898,7 @@ var options = {
                         label: 'Total',
                         formatter: function(w) {
                             // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                            return 145212
+                            return <%=sum3%>	
                         }
                     }
                 }
@@ -952,6 +976,199 @@ var options = {
 		var chart2 = new ApexCharts(document.querySelector("#recent_trend"),
 				options2);
 		chart2.render();
+		
+
+	    var options = {
+	        series: [{
+	                name: "New Patient",
+	                data: [28, 15, 30, 18, 35, 13, 43]
+	            },
+	            {
+	                name: "Return Patient",
+	                data: [10, 39, 20, 36, 15, 32, 17]
+	            }
+	        ],
+	        chart: {
+	            height: 200,
+	            type: 'line',
+	            toolbar: {
+	                show: false
+	            }
+	        },
+	        colors: ['#ee3158', '#1dbfc1'],
+	        dataLabels: {
+	            enabled: false,
+	        },
+	        stroke: {
+	            curve: 'smooth'
+	        },
+	        grid: {
+	            show: false,
+	        },
+	        xaxis: {
+	            categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Set', 'Sun'],
+	        },
+	        legend: {
+	            show: true,
+	        },
+	        xaxis: {
+	            axisBorder: {
+	                show: false
+	            },
+	            axisTicks: {
+	                show: false,
+	            },
+	            labels: {
+	                show: false,
+	            }
+	        },
+	        yaxis: {
+	            axisBorder: {
+	                show: false
+	            },
+	            axisTicks: {
+	                show: false,
+	            },
+	            labels: {
+	                show: false,
+	            }
+	        },
+	    };
+
+	    var chart = new ApexCharts(document.querySelector("#patients_pace"), options);
+	    chart.render();
+	    var nestedChart = echarts.init(document.getElementById('nested-pie'));
+        var option = {
+            
+           tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+
+                // Add legend
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data: ['<%=names[0]%>','<%=names[1]%>','<%=names[2]%>','<%=names[3]%>','<%=names[4]%>','<%=names[5]%>','<%=names[6]%>','<%=names[7]%>','<%=names[8]%>','<%=names[9]%>','Others']
+                },
+
+                // Add custom colors
+                color: ['#689f38', '#38649f', '#389f99', '#ee1044', '#ff8f00'],
+
+                // Display toolbox
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    feature: {
+                        mark: {
+                            show: true,
+                            title: {
+                                mark: 'Markline switch',
+                                markUndo: 'Undo markline',
+                                markClear: 'Clear markline'
+                            }
+                        },
+                        dataView: {
+                            show: true,
+                            readOnly: false,
+                            title: 'View data',
+                            lang: ['View chart data', 'Close', 'Update']
+                        },
+                        magicType: {
+                            show: true,
+                            title: {
+                                pie: 'Switch to pies',
+                                funnel: 'Switch to funnel',
+                            },
+                            type: ['pie', 'funnel']
+                        },
+                        restore: {
+                            show: true,
+                            title: 'Restore'
+                        },
+                        saveAsImage: {
+                            show: true,
+                            title: 'Same as image',
+                            lang: ['Save']
+                        }
+                    }
+                },
+
+                // Enable drag recalculate
+                calculable: false,
+
+                // Add series
+                series: [
+
+                    // Inner
+                    {
+                        name: 'Countries',
+                        type: 'pie',
+                        selectedMode: 'single',
+                        radius: [0, '40%'],
+
+                        // for funnel
+                        x: '15%',
+                        y: '7.5%',
+                        width: '40%',
+                        height: '85%',
+                        funnelAlign: 'right',
+                        max: 1548,
+
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    position: 'inner'
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true
+                                }
+                            }
+                        },
+
+                        data: [
+                            {value: <%=values[8]%>, name: '<%=names[8]%>'},
+                            {value: <%=values[9]%>, name: '<%=names[9]%>'},
+                            {value: <%=others%>, name: 'Others'}
+                        ]
+                    },
+
+                    // Outer
+                    {
+                        name: 'Countries',
+                        type: 'pie',
+                        radius: ['60%', '85%'],
+
+                        // for funnel
+                        x: '55%',
+                        y: '7.5%',
+                        width: '35%',
+                        height: '85%',
+                        funnelAlign: 'left',
+                        max: 1048,
+
+                        data: [
+                            {value:<%=values[0]%>, name: '<%=names[0]%>'},
+							{value:<%=values[1]%>, name: '<%=names[1]%>'},
+							{value:<%=values[2]%>, name: '<%=names[2]%>'},
+							{value:<%=values[3]%>, name: '<%=names[3]%>'},
+							{value:<%=values[4]%>, name: '<%=names[4]%>'},
+							{value:<%=values[5]%>, name:'<%=names[5]%>'},
+							{value:<%=values[6]%>, name: '<%=names[6]%>'},
+							{value:<%=values[7]%>, name:'<%=names[7]%>'}
+                        ]
+                    }
+                ]
+        };    
+       
+    
+        nestedChart.setOption(option);
+		
 	</script>
 
 

@@ -71,18 +71,7 @@ $(document).ready(function() {
 	});
 });
 
-$('#next_2').click(function() {
-	$('#first-form').toggle();
-	$('#second-form').toggle();
-});
-$('#next_3').click(function() {
-	$('#second-form').toggle();
-	$('#third-form').toggle();
-});
-$('#next_4').click(function() {
-	$('#third-form').toggle();
-	$('#fourth-form').toggle();
-});
+
 $(".tab-wizard").steps({
 	headerTag: "h6"
 	, bodyTag: "section"
@@ -178,7 +167,15 @@ $(".validation-wizard").steps({
 				alert('Try again champ! ' + textStatus);
 				window.location.reload();
 			});
-		swal("Your Form Submitted!", "Please go to dashboard to see the result", "success");
+		setTimeout(function() {
+        swal({
+            title: "Wow!",
+            text: "Go To Dashboard to see the Result!",
+            type: "success"
+        }, function() {
+            window.location = "/dashboard";
+        });
+    }, 1000);
 	}
 }), $(".validation-wizard").validate({
 	ignore: "input[type=hidden]"
