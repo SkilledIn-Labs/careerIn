@@ -40,7 +40,7 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
 
 		// HttpSession session = request.getSession();
 		session.setAttribute("userName", userName);
-		response.sendRedirect("/index.jsp");
+		response.sendRedirect("/");
 
 	}
 

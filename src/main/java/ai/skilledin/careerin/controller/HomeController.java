@@ -14,9 +14,14 @@ public class HomeController {
 		return "index";
 	}
 
-	@RequestMapping("/thankyou")
-	public String thankyou() {
-		return "thankyou";
+	@RequestMapping("/home")
+	public String index() {
+		return "index";
+	}
+
+	@RequestMapping("/dashboard")
+	public String dashboard() {
+		return "dashboard";
 	}
 
 	@RequestMapping("user")
