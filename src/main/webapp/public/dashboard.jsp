@@ -1,3 +1,6 @@
+<%@page import="ai.skilledin.careerin.dao.models.Roles"%>
+<%@page
+	import="ai.skilledin.careerin.dao.models.PredictionResponseWrapper"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -165,7 +168,7 @@
 					<div class="multinav-scroll" style="height: 100%;">
 						<!-- sidebar menu-->
 						<ul class="sidebar-menu" data-widget="tree">
-							<li class="treeview"><a href="/home"> <i class="fas fa-home"></i><span>Home</span>
+							<li><a href="/home"> <i class="fas fa-home"></i><span>Home</span>
 									<span class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
@@ -173,21 +176,18 @@
 							<li><a href="/dashboard"> <i class="fas fa-chart-bar"></i>
 									<span>Dashboard</span>
 							</a></li>
-							<li class="treeview"><a href="/team"> <i
-									class="fas fa-users"></i> <span>Team</span> <span
-									class="pull-right-container"> </span>
+							<li><a href="/team"> <i class="fas fa-users"></i> <span>Team</span>
+									<span class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li class="treeview"><a href="/team"> <i
-									class="fas fa-code"></i> <span>About Us</span> <span
-									class="pull-right-container"> </span>
+							<li><a href="/team"> <i class="fas fa-code"></i> <span>About
+										Us</span> <span class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li class="treeview"><a href="/team"> <i
-									class="fas fa-folder"></i> <span>Something</span> <span
-									class="pull-right-container"> </span>
+							<li><a href="/team"> <i class="fas fa-folder"></i> <span>Something</span>
+									<span class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
@@ -203,6 +203,28 @@
 			</section>
 		</aside>
 
+		//java code
+		<%
+		PredictionResponseWrapper prediction = (PredictionResponseWrapper) session.getAttribute("prediction");
+		String[] names = new String[100];
+		String[] values = new String[100];
+		String[] img = new String[100];
+		System.out.println(prediction);
+		if (prediction != null) {
+			for (int i = 0; i < prediction.getRoleName().size(); i++) {
+				names[i] = prediction.getRoleName().get(i).getRole_name();
+				values[i] = String.format("%.2f", prediction.getValues().get(i) * 100);
+				img[i] = prediction.getRoleName().get(i).getImg();
+			}
+		} else {
+			for (int i = 0; i < 100; i++) {
+				names[i] = "_blank";
+				values[i] = "0.00";
+				img[i] = "https://www.endivesoftware.com/wp-content/uploads/2019/08/hybrid-application.svg";
+
+			}
+		}
+		%>
 		<!-- Content Wrapper. Contains page content -->
 
 		<!-- Content Wrapper. Contains page content -->
@@ -211,639 +233,178 @@
 				<!-- Main content -->
 				<section class="content">
 					<div class="row">
-						<div class="col-xl-8 col-12">
+						<div class="col-xl-12 col-16">
 							<div class="box">
+								<div class="box-header">
+									<h4 class="box-title">Our Predictions</h4>
+								</div>
 								<div class="box-body">
 									<div class="row">
-										<div class="col-xl-3 col-md-6 col-12">
-											<div class="d-flex align-items-center mb-15 mb-lg-0">
-												<div
-													class="me-15 bg-danger w-60 h-60 rounded-circle text-center l-h-70">
-													<i class="fs-24 fa fa-user"></i>
-												</div>
-												<div>
-													<p class="text-fade fs-16 mb-0">Patients</p>
-													<h3 class="fw-500 my-0">1,421</h3>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3 col-md-6 col-12">
-											<div class="d-flex align-items-center mb-15 mb-lg-0">
-												<div
-													class="me-15 bg-warning w-60 h-60 rounded-circle text-center l-h-70">
-													<i class="fs-24 fa fa-user-md"></i>
-												</div>
-												<div>
-													<p class="text-fade fs-16 mb-0">Staffs</p>
-													<h3 class="fw-500 my-0">1,521</h3>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3 col-md-6 col-12">
-											<div class="d-flex align-items-center mb-15 mb-md-0">
-												<div
-													class="me-15 bg-success w-60 h-60 rounded-circle text-center l-h-70">
-													<i class="fs-24 fa fa-hospital-o"></i>
-												</div>
-												<div>
-													<p class="text-fade fs-16 mb-0">Rooms</p>
-													<h3 class="fw-500 my-0">2,415</h3>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3 col-md-6 col-12">
-											<div class="d-flex align-items-center mb-15 mb-md-0">
-												<div
-													class="me-15 bg-info w-60 h-60 rounded-circle text-center l-h-70">
-													<i class="fs-24 fa fa-ambulance"></i>
-												</div>
-												<div>
-													<p class="text-fade fs-16 mb-0">Ambulance</p>
-													<h3 class="fw-500 my-0">15</h3>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xl-6 col-12">
-									<div class="box">
-										<div class="box-header">
-											<h4 class="box-title">Patients</h4>
-										</div>
-										<div class="box-body">
-											<p class="mb-0 text-muted">Total Patients</p>
-											<h3 class="text-success mt-0">412,154 People</h3>
-											<div class="d-md-flex align-items-center">
-												<div id="patient_overview" class="min-h-250"></div>
-												<div class="d-md-block d-flex">
-													<div class="d-flex align-items-center me-md-0 me-15">
-														<div class="me-10 bg-success w-30 h-30 rounded"></div>
-														<div>
-															<p class="text-fade mb-0">New</p>
-															<h4 class="fw-500 my-0">64</h4>
-														</div>
-													</div>
-													<div class="d-flex align-items-center my-20 me-md-0 me-15">
-														<div class="me-10 bg-warning w-30 h-30 rounded"></div>
-														<div>
-															<p class="text-fade mb-0">Recovered</p>
-															<h4 class="fw-500 my-0">73</h4>
-														</div>
-													</div>
-													<div class="d-flex align-items-center me-md-0 me-15">
-														<div class="me-10 bg-danger w-30 h-30 rounded"></div>
-														<div>
-															<p class="text-fade mb-0">In Treatment</p>
-															<h4 class="fw-500 my-0">48</h4>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-6 col-12">
-									<div class="box">
-										<div class="box-header">
-											<h4 class="box-title">Daily Revenue Report</h4>
-										</div>
-										<div class="box-body">
-											<h3 class="text-primary mt-0">
-												$32,485 <small class="text-muted">$12,458</small>
-											</h3>
-											<div id="recent_trend"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-6 col-12">
-									<div class="box">
-										<div class="box-header">
-											<h4 class="box-title">Next Patient</h4>
-										</div>
-										<div class="box-body">
-											<div class="news-slider owl-carousel owl-sl">
-												<div>
-													<div class="d-flex align-items-center mb-10">
-														<div class="me-15">
-															<img src="../images/avatar/1.jpg"
-																class="w-auto avatar avatar-lg rounded10 bg-primary-light"
-																alt="" />
-														</div>
-														<div class="d-flex flex-column flex-grow-1 fw-500">
-															<p class="hover-primary text-fade mb-1 fs-14">Shawn
-																Hampton</p>
-															<span class="text-dark fs-16">Emergency
-																appointment</span>
-														</div>
-														<div>
-															<a href="#"
-																class="waves-effect waves-circle btn btn-circle btn-primary-light btn-sm mx-15"><i
-																class="fa fa-phone"></i></a>
-														</div>
-													</div>
+										<div class="col-xl-2 col-md-3 col-6">
+											<div class="box bg-success">
+												<div class="box-body text-center">
 													<div
-														class="d-flex justify-content-between align-items-end mt-40 py-10 bt-dashed border-top">
-														<div>
-															<p class="mb-0 text-muted">
-																<i class="fa fa-clock-o me-5"></i> 10:00 <span
-																	class="mx-20">$ 30</span>
-															</p>
-														</div>
-														<div>
-															<div class="dropdown">
-																<a data-bs-toggle="dropdown" href="#"
-																	class="base-font mx-30"><i
-																	class="ti-more-alt text-muted"></i></a>
-																<div class="dropdown-menu dropdown-menu-end">
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-import"></i> Import</a> <a class="dropdown-item"
-																		href="#"><i class="ti-export"></i> Export</a> <a
-																		class="dropdown-item" href="#"><i
-																		class="ti-printer"></i> Print</a>
-																	<div class="dropdown-divider"></div>
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-settings"></i> Settings</a>
-																</div>
-															</div>
-														</div>
+														class="bg-info-light rounded10 p-20 mx-auto w-100 h-100">
+														<img src="<%=img[0]%>" class="" alt="" />
 													</div>
-												</div>
-												<div>
-													<div class="d-flex align-items-center mb-10">
-														<div class="me-15">
-															<img src="../images/avatar/2.jpg"
-																class="w-auto avatar avatar-lg rounded10 bg-primary-light"
-																alt="" />
-														</div>
-														<div class="d-flex flex-column flex-grow-1 fw-500">
-															<p class="hover-primary text-fade mb-1 fs-14">Polly
-																Paul</p>
-															<span class="text-dark fs-16">USG + Consultation</span>
-														</div>
-														<div>
-															<a href="#"
-																class="waves-effect waves-circle btn btn-circle btn-primary-light btn-sm mx-15"><i
-																class="fa fa-phone"></i></a>
-														</div>
-													</div>
-													<div
-														class="d-flex justify-content-between align-items-end mt-40 py-10 bt-dashed border-top">
-														<div>
-															<p class="mb-0 text-muted">
-																<i class="fa fa-clock-o me-5"></i> 10:30 <span
-																	class="mx-20">$ 50</span>
-															</p>
-														</div>
-														<div>
-															<div class="dropdown">
-																<a data-bs-toggle="dropdown" href="#"
-																	class="base-font mx-30"><i
-																	class="ti-more-alt text-muted"></i></a>
-																<div class="dropdown-menu dropdown-menu-end">
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-import"></i> Import</a> <a class="dropdown-item"
-																		href="#"><i class="ti-export"></i> Export</a> <a
-																		class="dropdown-item" href="#"><i
-																		class="ti-printer"></i> Print</a>
-																	<div class="dropdown-divider"></div>
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-settings"></i> Settings</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div>
-													<div class="d-flex align-items-center mb-10">
-														<div class="me-15">
-															<img src="../images/avatar/3.jpg"
-																class="w-auto avatar avatar-lg rounded10 bg-primary-light"
-																alt="" />
-														</div>
-														<div class="d-flex flex-column flex-grow-1 fw-500">
-															<p class="hover-primary text-fade mb-1 fs-14">Johen
-																Doe</p>
-															<span class="text-dark fs-16">Laboratory screening</span>
-														</div>
-														<div>
-															<a href="#"
-																class="waves-effect waves-circle btn btn-circle btn-primary-light btn-sm mx-15"><i
-																class="fa fa-phone"></i></a>
-														</div>
-													</div>
-													<div
-														class="d-flex justify-content-between align-items-end mt-40 py-10 bt-dashed border-top">
-														<div>
-															<p class="mb-0 text-muted">
-																<i class="fa fa-clock-o me-5"></i> 11:00 <span
-																	class="mx-20">$ 70</span>
-															</p>
-														</div>
-														<div>
-															<div class="dropdown">
-																<a data-bs-toggle="dropdown" href="#"
-																	class="base-font mx-30"><i
-																	class="ti-more-alt text-muted"></i></a>
-																<div class="dropdown-menu dropdown-menu-end">
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-import"></i> Import</a> <a class="dropdown-item"
-																		href="#"><i class="ti-export"></i> Export</a> <a
-																		class="dropdown-item" href="#"><i
-																		class="ti-printer"></i> Print</a>
-																	<div class="dropdown-divider"></div>
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-settings"></i> Settings</a>
-																</div>
-															</div>
-														</div>
-													</div>
+													<div class="box-header"></div>
+													<p class="text-fade mt-15 mb-5"><%=names[0]%>
+													</p>
+													<h2 class="mt-0"><%=values[0] + "%"%></h2>
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="col-xl-6 col-12">
-									<div class="box">
-										<div class="box-header">
-											<h4 class="box-title">Laboratory tests</h4>
-										</div>
-										<div class="box-body">
-											<div class="news-slider owl-carousel owl-sl">
-												<div>
-													<div class="d-flex align-items-center mb-10">
-														<div class="d-flex flex-column flex-grow-1 fw-500">
-															<p class="hover-primary text-fade mb-1 fs-14">
-																<i class="fa fa-link"></i> Shawn Hampton
-															</p>
-															<span class="text-dark fs-16">Beta 2 Microglobulin</span>
-															<p class="mb-0 fs-14">
-																Marker Test <span class="badge badge-dot badge-primary"></span>
-															</p>
-														</div>
-														<div>
-															<div class="dropdown">
-																<a data-bs-toggle="dropdown" href="#"
-																	class="base-font mx-30"><i
-																	class="ti-more-alt text-muted"></i></a>
-																<div class="dropdown-menu dropdown-menu-end">
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-import"></i> Import</a> <a class="dropdown-item"
-																		href="#"><i class="ti-export"></i> Export</a> <a
-																		class="dropdown-item" href="#"><i
-																		class="ti-printer"></i> Print</a>
-																	<div class="dropdown-divider"></div>
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-settings"></i> Settings</a>
-																</div>
-															</div>
-														</div>
-													</div>
+										<div class="col-xl-2 col-md-3 col-6">
+											<div class="box">
+												<div class="box-body text-center">
 													<div
-														class="d-flex justify-content-between align-items-end py-10">
-														<div>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light">Details</a>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light">Contact
-																Patient</a>
-														</div>
-														<div>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light"><i
-																class="fa fa-check"></i> Archive</a>
-														</div>
+														class="bg-info-light rounded10 p-20 mx-auto w-100 h-100">
+														<img src="<%=img[1]%>" class="" alt="" />
 													</div>
-												</div>
-												<div>
-													<div class="d-flex align-items-center mb-10">
-														<div class="d-flex flex-column flex-grow-1 fw-500">
-															<p class="hover-primary text-fade mb-1 fs-14">
-																<i class="fa fa-link"></i> Johen Doe
-															</p>
-															<span class="text-dark fs-16">Keeping pregnant</span>
-															<p class="mb-0 fs-14">
-																Prga Test <span class="badge badge-dot badge-primary"></span>
-															</p>
-														</div>
-														<div>
-															<div class="dropdown">
-																<a data-bs-toggle="dropdown" href="#"
-																	class="base-font mx-30"><i
-																	class="ti-more-alt text-muted"></i></a>
-																<div class="dropdown-menu dropdown-menu-end">
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-import"></i> Import</a> <a class="dropdown-item"
-																		href="#"><i class="ti-export"></i> Export</a> <a
-																		class="dropdown-item" href="#"><i
-																		class="ti-printer"></i> Print</a>
-																	<div class="dropdown-divider"></div>
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-settings"></i> Settings</a>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div
-														class="d-flex justify-content-between align-items-end py-10">
-														<div>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light">Details</a>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light">Contact
-																Patient</a>
-														</div>
-														<div>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light"><i
-																class="fa fa-check"></i> Archive</a>
-														</div>
-													</div>
-												</div>
-												<div>
-													<div class="d-flex align-items-center mb-10">
-														<div class="d-flex flex-column flex-grow-1 fw-500">
-															<p class="hover-primary text-fade mb-1 fs-14">
-																<i class="fa fa-link"></i> Polly Paul
-															</p>
-															<span class="text-dark fs-16">USG + Consultation</span>
-															<p class="mb-0 fs-14">
-																Marker Test <span class="badge badge-dot badge-primary"></span>
-															</p>
-														</div>
-														<div>
-															<div class="dropdown">
-																<a data-bs-toggle="dropdown" href="#"
-																	class="base-font mx-30"><i
-																	class="ti-more-alt text-muted"></i></a>
-																<div class="dropdown-menu dropdown-menu-end">
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-import"></i> Import</a> <a class="dropdown-item"
-																		href="#"><i class="ti-export"></i> Export</a> <a
-																		class="dropdown-item" href="#"><i
-																		class="ti-printer"></i> Print</a>
-																	<div class="dropdown-divider"></div>
-																	<a class="dropdown-item" href="#"><i
-																		class="ti-settings"></i> Settings</a>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div
-														class="d-flex justify-content-between align-items-end py-10">
-														<div>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light">Details</a>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light">Contact
-																Patient</a>
-														</div>
-														<div>
-															<a href="#"
-																class="waves-effect waves-light btn btn-sm btn-primary-light"><i
-																class="fa fa-check"></i> Archive</a>
-														</div>
-													</div>
+													<div class="box-header"></div>
+													<p class="text-fade mt-15 mb-5"><%=names[1]%>
+													</p>
+													<h2 class="mt-0"><%=values[1] + "%"%></h2>
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="col-xl-6 col-12">
-									<div class="box">
-										<div class="box-header">
-											<h4 class="box-title">Overal appointment</h4>
+										<div class="col-xl-2 col-md-3 col-6">
+											<div class="box">
+												<div class="box-body text-center">
+													<div
+														class="bg-info-light rounded10 p-20 mx-auto w-100 h-100">
+														<img src="<%=img[2]%>" class="" alt="" />
+													</div>
+													<div class="box-header"></div>
+													<p class="text-fade mt-15 mb-5"><%=names[2]%>
+													</p>
+													<h2 class="mt-0"><%=values[2] + "%"%></h2>
+												</div>
+											</div>
 										</div>
-										<div class="box-body">
-											<div id="appointment_overview"></div>
+										<div class="col-xl-2 col-md-3 col-6">
+											<div class="box">
+												<div class="box-body text-center">
+													<div
+														class="bg-info-light rounded10 p-20 mx-auto w-100 h-100">
+														<img src="<%=img[3]%>" class="" alt="" />
+													</div>
+													<div class="box-header"></div>
+													<p class="text-fade mt-15 mb-5"><%=names[3]%>
+													</p>
+													<h2 class="mt-0"><%=values[3] + "%"%></h2>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-								<div class="col-xl-6 col-12">
-									<div class="box">
-										<div class="box-header">
-											<h4 class="box-title">Patients Pace</h4>
+										<div class="col-xl-2 col-md-4 col-6">
+											<div class="box">
+												<div class="box-body text-center">
+													<div
+														class="bg-info-light rounded10 p-20 mx-auto w-100 h-100">
+														<img src="<%=img[4]%>" class="" alt="" />
+													</div>
+													<div class="box-header"></div>
+													<p class="text-fade mt-15 mb-5"><%=names[4]%>
+													</p>
+													<h2 class="mt-0"><%=values[4] + "%"%></h2>
+												</div>
+											</div>
 										</div>
-										<div class="box-body">
-											<div id="patients_pace"></div>
+										<div class="col-xl-2 col-md-4 col-6">
+											<div class="box">
+												<div class="box-body text-center">
+													<div
+														class="bg-info-light rounded10 p-20 mx-auto w-100 h-100">
+														<img src="<%=img[5]%>" class="" alt="" />
+													</div>
+													<div class="box-header"></div>
+
+													<p class="text-fade mt-15 mb-5"><%=names[5]%>
+													</p>
+													<h2 class="mt-0"><%=values[5] + "%"%></h2>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-4 col-12">
-							<div class="box">
-								<div class="box-header with-border">
-									<h4 class="box-title">Available Doctors</h4>
-									<p class="mb-0 pull-right">Today</p>
-								</div>
-								<div class="box-body">
-									<div class="inner-user-div3">
-										<div class="d-flex align-items-center mb-30">
-											<div class="me-15">
-												<img src="../images/avatar/avatar-1.png"
-													class="avatar avatar-lg rounded10 bg-primary-light" alt="" />
-											</div>
-											<div class="d-flex flex-column flex-grow-1 fw-500">
-												<a href="#" class="text-dark hover-primary mb-1 fs-16">Dr.
-													Jaylon Stanton</a> <span class="text-fade">Dentist</span>
-											</div>
-											<div class="dropdown">
-												<a class="px-10 pt-5" href="#" data-bs-toggle="dropdown"><i
-													class="ti-more-alt"></i></a>
-												<div class="dropdown-menu dropdown-menu-end">
-													<a class="dropdown-item flexbox" href="#"> <span>Inbox</span>
-														<span class="badge badge-pill badge-info">5</span>
-													</a> <a class="dropdown-item" href="#">Sent</a> <a
-														class="dropdown-item" href="#">Spam</a>
-													<div class="dropdown-divider"></div>
-													<a class="dropdown-item flexbox" href="#"> <span>Draft</span>
-														<span class="badge badge-pill badge-default">1</span>
-													</a>
+						<div class="row">
+							<div class="col-xl-6 col-12">
+								<div class="box">
+									<div class="box-header">
+										<h4 class="box-title">Top 3 results</h4>
+									</div>
+									<div class="box-body">
+										<p class="mb-0 text-muted">Total Roles</p>
+										<h3 class="text-success mt-0">38</h3>
+										<div class="d-md-flex align-items-center">
+											<div id="patient_overview" class="min-h-250"></div>
+											<div class="d-md-block d-flex">
+												<div class="d-flex align-items-center me-md-0 me-15">
+													<div class="me-10 bg-success w-30 h-30 rounded"></div>
+													<div>
+														<p class="text-fade mb-0"><%=names[0]%></p>
+														<h4 class="fw-500 my-0"><%=values[0] + "%"%></h4>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="d-flex align-items-center mb-30">
-											<div class="me-15">
-												<img src="../images/avatar/avatar-10.png"
-													class="avatar avatar-lg rounded10 bg-primary-light" alt="" />
-											</div>
-											<div class="d-flex flex-column flex-grow-1 fw-500">
-												<a href="#" class="text-dark hover-danger mb-1 fs-16">Dr.
-													Carla Schleifer</a> <span class="text-fade">Oculist</span>
-											</div>
-											<div class="dropdown">
-												<a class="px-10 pt-5" href="#" data-bs-toggle="dropdown"><i
-													class="ti-more-alt"></i></a>
-												<div class="dropdown-menu dropdown-menu-end">
-													<a class="dropdown-item flexbox" href="#"> <span>Inbox</span>
-														<span class="badge badge-pill badge-info">5</span>
-													</a> <a class="dropdown-item" href="#">Sent</a> <a
-														class="dropdown-item" href="#">Spam</a>
-													<div class="dropdown-divider"></div>
-													<a class="dropdown-item flexbox" href="#"> <span>Draft</span>
-														<span class="badge badge-pill badge-default">1</span>
-													</a>
+												<div class="d-flex align-items-center my-20 me-md-0 me-15">
+													<div class="me-10 bg-warning w-30 h-30 rounded"></div>
+													<div>
+														<p class="text-fade mb-0"><%=names[1]%></p>
+														<h4 class="fw-500 my-0"><%=values[1] + "%"%></h4>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="d-flex align-items-center mb-30">
-											<div class="me-15">
-												<img src="../images/avatar/avatar-11.png"
-													class="avatar avatar-lg rounded10 bg-primary-light" alt="" />
-											</div>
-											<div class="d-flex flex-column flex-grow-1 fw-500">
-												<a href="#" class="text-dark hover-success mb-1 fs-16">Dr.
-													Hanna Geidt</a> <span class="text-fade">Surgeon</span>
-											</div>
-											<div class="dropdown">
-												<a class="px-10 pt-5" href="#" data-bs-toggle="dropdown"><i
-													class="ti-more-alt"></i></a>
-												<div class="dropdown-menu dropdown-menu-end">
-													<a class="dropdown-item flexbox" href="#"> <span>Inbox</span>
-														<span class="badge badge-pill badge-info">5</span>
-													</a> <a class="dropdown-item" href="#">Sent</a> <a
-														class="dropdown-item" href="#">Spam</a>
-													<div class="dropdown-divider"></div>
-													<a class="dropdown-item flexbox" href="#"> <span>Draft</span>
-														<span class="badge badge-pill badge-default">1</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="d-flex align-items-center mb-30">
-											<div class="me-15">
-												<img src="../images/avatar/avatar-12.png"
-													class="avatar avatar-lg rounded10 bg-primary-light" alt="" />
-											</div>
-											<div class="d-flex flex-column flex-grow-1 fw-500">
-												<a href="#" class="text-dark hover-info mb-1 fs-16">Dr.
-													Roger George</a> <span class="text-fade">General
-													Practitioners</span>
-											</div>
-											<div class="dropdown">
-												<a class="px-10 pt-5" href="#" data-bs-toggle="dropdown"><i
-													class="ti-more-alt"></i></a>
-												<div class="dropdown-menu dropdown-menu-end">
-													<a class="dropdown-item flexbox" href="#"> <span>Inbox</span>
-														<span class="badge badge-pill badge-info">5</span>
-													</a> <a class="dropdown-item" href="#">Sent</a> <a
-														class="dropdown-item" href="#">Spam</a>
-													<div class="dropdown-divider"></div>
-													<a class="dropdown-item flexbox" href="#"> <span>Draft</span>
-														<span class="badge badge-pill badge-default">1</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="d-flex align-items-center">
-											<div class="me-15">
-												<img src="../images/avatar/avatar-15.png"
-													class="avatar avatar-lg rounded10 bg-primary-light" alt="" />
-											</div>
-											<div class="d-flex flex-column flex-grow-1 fw-500">
-												<a href="#" class="text-dark hover-warning mb-1 fs-16">Dr.
-													Natalie doe</a> <span class="text-fade">Physician</span>
-											</div>
-											<div class="dropdown">
-												<a class="px-10 pt-5" href="#" data-bs-toggle="dropdown"><i
-													class="ti-more-alt"></i></a>
-												<div class="dropdown-menu dropdown-menu-end">
-													<a class="dropdown-item flexbox" href="#"> <span>Inbox</span>
-														<span class="badge badge-pill badge-info">5</span>
-													</a> <a class="dropdown-item" href="#">Sent</a> <a
-														class="dropdown-item" href="#">Spam</a>
-													<div class="dropdown-divider"></div>
-													<a class="dropdown-item flexbox" href="#"> <span>Draft</span>
-														<span class="badge badge-pill badge-default">1</span>
-													</a>
+												<div class="d-flex align-items-center me-md-0 me-15">
+													<div class="me-10 bg-danger w-30 h-30 rounded"></div>
+													<div>
+														<p class="text-fade mb-0"><%=names[2]%></p>
+														<h4 class="fw-500 my-0"><%=values[2] + "%"%></h4>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="box bg-success box-inverse">
-								<div class="box-header">
-									<h4 class="box-title">Doctor of the Month</h4>
-								</div>
-								<div class="box-body text-center">
-									<div class="mb-0">
-										<img src="../images/avatar/avatar-12.png" width="100"
-											class="rounded-circle bg-info-light" alt="user">
-										<h3 class="mt-20 mb-0">Dr. Johen Doe</h3>
-										<p class="mb-0">Cardiologists</p>
+							<div class="col-xl-6 col-12">
+								<div class="box">
+									<div class="box-header">
+										<h4 class="box-title">Daily Revenue Report</h4>
 									</div>
-								</div>
-								<div class="p-20">
-									<div class="row">
-										<div class="col-6 be-1">
-											<div class="d-flex align-items-center">
-												<img src="../images/health-1.png"
-													class="img-fluid me-10 w-50" alt="" />
-												<div>
-													<h2 class="mb-0 text-white">10</h2>
-													<p class="mb-0 text-white-50">Operations</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="d-flex align-items-center">
-												<img src="../images/health-2.png"
-													class="img-fluid me-10 w-50" alt="" />
-												<div>
-													<h2 class="mb-0 text-white">47</h2>
-													<p class="mb-0 text-white-50">Patients</p>
-												</div>
-											</div>
-										</div>
+									<div class="box-body">
+										<h3 class="text-primary mt-0">
+											$32,485 <small class="text-muted">$12,458</small>
+										</h3>
+										<div id="recent_trend"></div>
 									</div>
 								</div>
 							</div>
 
 
-							<div class="box">
-								<div class="box-header no-border">
-									<h4 class="box-title">Admission by Division</h4>
-								</div>
-								<div class="box-body pt-0">
-									<div id="chart124"></div>
-									<div class="row mt-25">
-										<div class="col-6">
-											<p class="mb-5">
-												<span class="badge badge-dot badge-success"></span>
-												Cardiology
-											</p>
-											<p class="mb-5">
-												<span class="badge badge-dot badge-info"></span>
-												Endocrinology
-											</p>
-											<p class="mb-0">
-												<span class="badge badge-dot badge-danger"></span>
-												Physicians
-											</p>
-										</div>
-										<div class="col-6">
-											<p class="mb-5">
-												<span class="badge badge-dot badge-warning"></span>
-												Dermatology
-											</p>
-											<p class="mb-5">
-												<span class="badge badge-dot badge-primary"></span>
-												Orthopedics
-											</p>
-											<p class="mb-0">
-												<span class="badge badge-dot badge-secondary"></span>
-												Immunology
-											</p>
-										</div>
+							<div class="col-xl-6 col-12">
+								<div class="box">
+									<div class="box-header">
+										<h4 class="box-title">Overal appointment</h4>
+									</div>
+									<div class="box-body">
+										<div id="appointment_overview"></div>
 									</div>
 								</div>
 							</div>
-
+							<div class="col-xl-6 col-12">
+								<div class="box">
+									<div class="box-header">
+										<h4 class="box-title">Patients Pace</h4>
+									</div>
+									<div class="box-body">
+										<div id="patients_pace"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+
 				</section>
 				<!-- /.content -->
 			</div>
@@ -1288,8 +849,114 @@
 	<!-- Rhythm Admin App -->
 	<script src="public/js/template.js"></script>
 	<script src="public/js/pages/dashboard2.js"></script>
+	<script type="text/javascript">
+
+var options = {
+        series: [<%=values[0]%>, <%=values[1]%>, <%=values[2]%>],
+        chart: {
+            height: 250,
+            type: 'radialBar',
+        },
+        stroke: {
+            lineCap: "round",
+        },
+        plotOptions: {
+            radialBar: {
+                dataLabels: {
+                    name: {
+                        fontSize: '22px',
+                    },
+                    value: {
+                        fontSize: '16px',
+                    },
+                    total: {
+                        show: true,
+                        label: 'Total',
+                        formatter: function(w) {
+                            // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                            return 145212
+                        }
+                    }
+                }
+            }
+        },
+        colors: ['#3246D3', '#ffa800', '#ee3158'],
+        labels: ['<%=names[0]%>', '<%=names[1]%>', "<%=names[2]%>" ],
+		};
+
+		var chart = new ApexCharts(document.querySelector("#patient_overview"),
+				options);
+		chart.render();
+
+		var options2 = {
+			series : [ {
+				name : 'India',
+				data : [ 76, 85, 101, 98, 87, 105, 91 ]
+			}, {
+				name : 'USA',
+				data : [ 44, 55, 57, 56, 61, 58, 63 ]
+			} ],
+			chart : {
+				type : 'bar',
+				foreColor : "#bac0c7",
+				height : 270,
+				toolbar : {
+					show : false,
+				}
+			},
+			plotOptions : {
+				bar : {
+					endingShape : 'rounded',
+					horizontal : false,
+					columnWidth : '50%',
+				},
+			},
+			dataLabels : {
+				enabled : false,
+			},
+			grid : {
+				show : false,
+			},
+			stroke : {
+				show : true,
+				width : 2,
+				colors : [ 'transparent' ]
+			},
+			colors : [ '#ee3158', '#3246D3' ],
+			xaxis : {
+				categories : [ '2015', '2016', '2017', '2018', '2019', '2020',
+						'2021' ],
+
+			},
+			yaxis : {
+
+			},
+			legend : {
+				show : true,
+			},
+			fill : {
+				opacity : 1
+			},
+			tooltip : {
+				y : {
+					formatter : function(val) {
+						return "$ " + val + " thousands"
+					}
+				},
+				marker : {
+					show : false,
+				},
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#recent_trend"),
+				options2);
+		chart2.render();
+	</script>
+
 
 </body>
+
 
 <!-- Mirrored from multipurposethemes.com/admin/rhythm-admin-template/bs5/main/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 05:22:42 GMT -->
 </html>

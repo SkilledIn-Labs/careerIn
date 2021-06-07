@@ -24,6 +24,11 @@ public class HomeController {
 		return "dashboard";
 	}
 
+	@RequestMapping("/team")
+	public String team() {
+		return "team";
+	}
+
 	@RequestMapping("user")
 	@ResponseBody
 	public Principal user(Principal principal) {

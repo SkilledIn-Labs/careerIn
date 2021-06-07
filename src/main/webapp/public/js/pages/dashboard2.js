@@ -8,113 +8,6 @@ $(function() {
 
     'use strict';
 
-    var options = {
-        series: [64, 73, 48],
-        chart: {
-            height: 250,
-            type: 'radialBar',
-        },
-        stroke: {
-            lineCap: "round",
-        },
-        plotOptions: {
-            radialBar: {
-                dataLabels: {
-                    name: {
-                        fontSize: '22px',
-                    },
-                    value: {
-                        fontSize: '16px',
-                    },
-                    total: {
-                        show: true,
-                        label: 'Total',
-                        formatter: function(w) {
-                            // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                            return 145212
-                        }
-                    }
-                }
-            }
-        },
-        colors: ['#3246D3', '#ffa800', '#ee3158'],
-        labels: ['New', 'Recovered', 'In Treatment'],
-    };
-
-    var chart = new ApexCharts(document.querySelector("#patient_overview"), options);
-    chart.render();
-
-
-
-
-
-    var options = {
-        series: [{
-            name: 'Income',
-            data: [76, 85, 101, 98, 87, 105, 91]
-        }, {
-            name: 'Expense',
-            data: [44, 55, 57, 56, 61, 58, 63]
-        }],
-        chart: {
-            type: 'bar',
-            foreColor: "#bac0c7",
-            height: 270,
-            toolbar: {
-                show: false,
-            }
-        },
-        plotOptions: {
-            bar: {
-                endingShape: 'rounded',
-                horizontal: false,
-                columnWidth: '50%',
-            },
-        },
-        dataLabels: {
-            enabled: false,
-        },
-        grid: {
-            show: false,
-        },
-        stroke: {
-            show: true,
-            width: 2,
-            colors: ['transparent']
-        },
-        colors: ['#ee3158', '#3246D3'],
-        xaxis: {
-            categories: ['10 May', '11 May', '12 May', '13 May', '14 May', '15 May', '16 May'],
-
-        },
-        yaxis: {
-
-        },
-        legend: {
-            show: true,
-        },
-        fill: {
-            opacity: 1
-        },
-        tooltip: {
-            y: {
-                formatter: function(val) {
-                    return "$ " + val + " thousands"
-                }
-            },
-            marker: {
-                show: false,
-            },
-        }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#recent_trend"), options);
-    chart.render();
-
-
-    // Slim scrolling
-
-
     $('.inner-user-div3').slimScroll({
         height: '200px'
     });
@@ -308,6 +201,6 @@ $(function() {
     };
 
     var chart = new ApexCharts(document.querySelector("#chart124"), options);
-    chart.render();
+   // chart.render();
 
 }); // End of use strict

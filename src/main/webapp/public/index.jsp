@@ -179,19 +179,19 @@
 							<li><a href="/dashboard"> <i class="fas fa-chart-bar"></i>
 									<span>Dashboard</span>
 							</a></li>
-							<li class="treeview"><a href="/team"> <i
+							<li ><a href="/team"> <i
 									class="fas fa-users"></i> <span>Team</span> <span
 									class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li class="treeview"><a href="/team"> <i
+							<li><a href="/team"> <i
 									class="fas fa-code"></i> <span>About Us</span> <span
 									class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li class="treeview"><a href="/team"> <i
+							<li><a href="/team"> <i
 									class="fas fa-folder"></i> <span>Something</span> <span
 									class="pull-right-container"> </span>
 							</a>

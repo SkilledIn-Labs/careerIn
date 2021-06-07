@@ -83,6 +83,8 @@ public class RestControllerApi {
 		logger.info("saved ->" + roleModel);
 		PredictionResponseWrapper makePredictionWrapper = autoML.makePredictionWrapper(roleIdFromPredictionModel);
 		logger.info(makePredictionWrapper.toString());
+		session.setAttribute("prediction", makePredictionWrapper);
+
 		return makePredictionWrapper;
 
 	}

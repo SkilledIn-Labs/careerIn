@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class PredictionResponseWrapper {
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	private List<Roles> roleName;
-	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	private List<Double> values;
 
 	public PredictionResponseWrapper() {
