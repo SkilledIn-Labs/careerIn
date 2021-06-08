@@ -167,10 +167,11 @@ $(".validation-wizard").steps({
 				alert('Try again champ! ' + textStatus);
 				window.location.reload();
 			});
+			
 		setTimeout(function() {
         swal({
-            title: "Wow!",
-            text: "Go To Dashboard to see the Result!",
+            title: "Submitted!",
+            text: "Go To Dashboard to see the Result! \n Please wait while we prepare the dashboard",
             type: "success"
         }, function() {
             window.location = "/dashboard";

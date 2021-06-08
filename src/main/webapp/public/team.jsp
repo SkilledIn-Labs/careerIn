@@ -37,7 +37,7 @@
 				<a href="index.html" class="logo"> <!-- logo-->
 					<div class="logo-mini w-50">
 						<span class="light-logo"><img
-							src="https://skilledin.file.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?st=2021-06-07T09%3A03%3A32Z&se=2023-06-08T09%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=sA%2BxpPxQZ9AVyzGyMS6s6RHf%2Bgk%2B%2FI9QX%2FQUJ3AVHB0%3D"
+							src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
 							alt="logo" style="max-width: 128%; margin-top: 22px;"></span>
 					</div> <!--  	<div class="logo-lg" style="margin-top: 4px; margin-left: -31px;">
 						<span class="light-logo"><img
@@ -140,7 +140,7 @@
 										</p>
 										<small class="fs-10 mb-0 text-uppercase text-mute">User</small>
 									</div>
-									<img src="https://skilledin.file.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?st=2021-06-07T09%3A03%3A32Z&se=2023-06-08T09%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=sA%2BxpPxQZ9AVyzGyMS6s6RHf%2Bgk%2B%2FI9QX%2FQUJ3AVHB0%3D"
+									<img src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
 										class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
 								</div>
 						</a>
@@ -210,12 +210,12 @@
 		<div class="content-header">
 			<div class="d-flex align-items-center">
 				<div class="me-auto">
-					<h4 class="page-title">Doctors</h4>
+					<h4 class="page-title">Team</h4>
 					<div class="d-inline-block align-items-center">
 						<nav>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item active" aria-current="page">Doctors</li>
+								<li class="breadcrumb-item active" aria-current="page">Team</li>
 							</ol>
 						</nav>
 					</div>
@@ -226,7 +226,12 @@
 
 		<!-- Main content -->
 		<section class="content">
-
+		<div class="col-12 col-lg-12 col-xl-12">
+		<div class="box box-body analytics-info" style="text-align:center;">
+										<h1 class="box-title">Meet the people who make awesome
+						stuffs</h1>
+									</div>
+		</div>
 			<div class="row">
 
 			  <div class="col-12 col-lg-4">
@@ -234,14 +239,14 @@
 				  <div class="ribbon-two ribbon-two-primary"><span>Prof-Incharge</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:380px" src="https://skilledin.file.core.windows.net/pics/sc_dutta375x375.jpg?st=2021-06-07T18%3A43%3A33Z&se=2023-06-08T18%3A43%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=jd9UCoX4M25KI1cR8NKxIIiZ3LPQQ8r5L3bDHnbJhfw%3D" alt="">
+					  <img class="img-fluid" style="height:425px;width:380px" src="https://skilledin.blob.core.windows.net/pics/teams/sc_dutta375x375.jpg?sv=2020-04-08&st=2021-06-08T04%3A40%3A06Z&se=2023-06-09T04%3A40%3A00Z&sr=b&sp=r&sig=5thY9hZ88J6U%2Fc1MIw2x6Cqv5%2FLBW%2BcfSIwB7IvvtU0%3D" alt="Prof Incharge">
 					</a>
 				  </div>
 				  <div class="box-body">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-instagram"><i class="fa fa-instagram"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
 							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 					  <div class="text-center">
@@ -256,15 +261,15 @@
 				  <div class="ribbon-two ribbon-two-danger"><span>AI/Backend</span></div>
 				  <div class="box-header no-border p-0" style="margin-left:17px;">				
 					<a href="#">
-					  <img class="img-fluid" src="https://skilledin.file.core.windows.net/white-pics/raj2.jpg?st=2021-06-07T18%3A54%3A36Z&se=2023-06-08T18%3A54%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=ec%2Ffz8toQH5ZKJBzFbmlpskLeeu5KUhFMH2BmfTYxkM%3D" alt="" style="height:425px;width:350px;">
+					  <img class="img-fluid" src="https://skilledin.blob.core.windows.net/pics/teams/raj2.jpg?sv=2020-04-08&st=2021-06-08T04%3A40%3A48Z&se=2023-06-09T04%3A40%3A00Z&sr=b&sp=r&sig=PriEA%2BTTX4SuQlFrwhDtLX6H%2ByN1KxfrQLLBAhp1%2Fg8%3D" alt="" style="height:425px;width:350px;">
 					</a>
 				  </div>
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-instagram"><i class="fa fa-instagram"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
 							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Utkarsh Raj</a></h3>
@@ -278,15 +283,15 @@
 				  <div class="ribbon-two ribbon-two-success"><span>Full Stack</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid"  style="height:425px;width:380px;" src="https://skilledin.file.core.windows.net/white-pics/yash_webdeveloper_2.jpg?st=2021-06-07T19%3A03%3A24Z&se=2023-06-08T19%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=K7xqn7VBFYjraO8dtQWlmQZ1rDxt1Fgw1M6GtUhVB%2FY%3D" alt="">
+					  <img class="img-fluid"  style="height:425px;width:380px;" src="https://skilledin.blob.core.windows.net/pics/teams/yash_webdeveloper_2.jpg?sv=2020-04-08&st=2021-06-08T04%3A41%3A15Z&se=2023-06-09T04%3A41%3A00Z&sr=b&sp=r&sig=MttT40%2BQQR5aRQTbSU7RvNHrNI2wQ%2FKJJ1PNmnRICF8%3D" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-instagram"><i class="fa fa-instagram"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
 							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Yashwant Narayan</a></h3>
@@ -300,15 +305,15 @@
 				<div class="ribbon-two ribbon-two-info"><span>UI/UX</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:590px;" src="https://skilledin.file.core.windows.net/white-pics/soda375.png?st=2021-06-07T19%3A08%3A17Z&se=2023-06-08T19%3A08%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=Bd0VMZZh97rIjruO8g%2B2OgJziG79gk%2BI2Sx0G37%2B7No%3D" alt="">
+					  <img class="img-fluid" style="height:425px;width:590px;" src="https://skilledin.blob.core.windows.net/pics/teams/soda375.png?sv=2020-04-08&st=2021-06-08T04%3A41%3A42Z&se=2023-06-09T04%3A41%3A00Z&sr=b&sp=r&sig=vSU874Mi4SKCvGMraeiqQc0LriQmgk4z4K%2B17UU7gZc%3D" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-instagram"><i class="fa fa-instagram"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
 							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Sodagar Hemberom</a></h3>
@@ -322,15 +327,15 @@
 				  <div class="ribbon-two ribbon-two-info"><span>Data Scientist</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:380px;" src="https://skilledin.file.core.windows.net/white-pics/sid.jpg?st=2021-06-07T19%3A10%3A26Z&se=2023-06-08T19%3A10%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=bqa210Qcndf6R%2ByehvKUSbr7c%2FdYGMyE9N6RrXrVM7w%3D" alt="">
+					  <img class="img-fluid" style="height:425px;width:380px;" src="https://skilledin.blob.core.windows.net/pics/teams/sid.jpg?sv=2020-04-08&st=2021-06-08T04%3A42%3A43Z&se=2023-06-09T04%3A42%3A00Z&sr=b&sp=r&sig=G5LjrckoP3VEItAW%2BbufBMwX4vHgSEsDXsp2dn5xNqs%3D" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-instagram"><i class="fa fa-instagram"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
 							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Sidharth Gupta</a></h3>
@@ -344,15 +349,15 @@
 				<div class="ribbon-two ribbon-two-info"><span>QA</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:380px;" src="https://skilledin.file.core.windows.net/white-pics/sonu.jpg?st=2021-06-07T19%3A13%3A44Z&se=2023-06-08T19%3A13%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=5bALat3RZtG5fdtF%2BurZ%2BfLLPLKORkSPAKBuheC4%2F5s%3D" alt="">
+					  <img class="img-fluid" style="height:425px;width:380px;" src="https://skilledin.blob.core.windows.net/pics/teams/sonu.jpg?sv=2020-04-08&st=2021-06-08T04%3A42%3A06Z&se=2023-06-09T04%3A42%3A00Z&sr=b&sp=r&sig=pv%2BLo8IqVan4%2B60RChwsOSfDC0mlmp17gvruxz3SmKM%3D" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-instagram"><i class="fa fa-instagram"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
 							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Sonu Tudu</a></h3>
@@ -376,7 +381,7 @@
 			<script>
 				document.write(new Date().getFullYear())
 			</script>
-			<a href="https://www.multipurposethemes.com/">SkilledIn-Labs</a>.
+			<a href="http://skilledin.ml">SkilledIn-Labs</a>.
 			All Rights Reserved.
 		</footer>
 

@@ -41,7 +41,7 @@
 				<a href="index.html" class="logo"> <!-- logo-->
 					<div class="logo-mini w-50">
 						<span class="light-logo"><img
-							src="https://skilledin.file.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?st=2021-06-07T09%3A03%3A32Z&se=2023-06-08T09%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=sA%2BxpPxQZ9AVyzGyMS6s6RHf%2Bgk%2B%2FI9QX%2FQUJ3AVHB0%3D"
+							src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
 							alt="logo" style="max-width: 128%; margin-top: 22px;"></span>
 					</div> <!--  	<div class="logo-lg" style="margin-top: 4px; margin-left: -31px;">
 						<span class="light-logo"><img
@@ -144,7 +144,7 @@
 										</p>
 										<small class="fs-10 mb-0 text-uppercase text-mute">User</small>
 									</div>
-									<img src="https://skilledin.file.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?st=2021-06-07T09%3A03%3A32Z&se=2023-06-08T09%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=sA%2BxpPxQZ9AVyzGyMS6s6RHf%2Bgk%2B%2FI9QX%2FQUJ3AVHB0%3D"
+									<img src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
 										class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
 								</div>
 						</a>
@@ -351,7 +351,7 @@
 						<div class="col-xl-12 col-12">
 								<div class="box">
 									<div class="box-body analytics-info">
-										<h4 class="box-title">Nested Pie Chart</h4>
+										<h4 class="box-title">Probability Distribution</h4>
 										<div id="nested-pie" style="height: 400px;"></div>
 									</div>
 								</div>
@@ -398,11 +398,11 @@
 							<div class="col-xl-6 col-12">
 								<div class="box">
 									<div class="box-header">
-										<h4 class="box-title">Daily Revenue Report</h4>
+										<h4 class="box-title">Recent Trends</h4>
 									</div>
 									<div class="box-body">
 										<h3 class="text-primary mt-0">
-											$32,485 <small class="text-muted">$12,458</small>
+											<%=names[0] %><small class="text-muted"></small>
 										</h3>
 										<div id="recent_trend"></div>
 									</div>
@@ -416,10 +416,10 @@
 							<div class="col-xl-6 col-12">
 								<div class="box">
 									<div class="box-header">
-										<h4 class="box-title">Patients Pace</h4>
+										<h4 class="box-title">Top Two</h4>
 									</div>
 									<div class="box-body">
-										<div id="patients_pace"></div>
+										<div id="two-chart"></div>
 									</div>
 								</div>
 							</div>
@@ -439,7 +439,7 @@
 			<script>
 				document.write(new Date().getFullYear())
 			</script>
-			<a href="https://www.multipurposethemes.com/">SkilledIn-Labs</a>.
+			<a href="http://skilledin.ml">SkilledIn-Labs</a>.
 			All Rights Reserved.
 		</footer>
 
@@ -620,6 +620,9 @@ var options = {
         chart: {
             height: 250,
             type: 'radialBar',
+            toolbar : {
+				show : true,
+			}
         },
         stroke: {
             lineCap: "round",
@@ -665,7 +668,7 @@ var options = {
 				foreColor : "#bac0c7",
 				height : 270,
 				toolbar : {
-					show : false,
+					show : true,
 				}
 			},
 			plotOptions : {
@@ -708,7 +711,7 @@ var options = {
 					}
 				},
 				marker : {
-					show : false,
+					show : true,
 				},
 			}
 		};
@@ -720,11 +723,11 @@ var options = {
 
 	    var options = {
 	        series: [{
-	                name: "New Patient",
+	                name: "<%=names[0]%>",
 	                data: [28, 15, 30, 18, 35, 13, 43]
 	            },
 	            {
-	                name: "Return Patient",
+	                name: "<%=names[1]%>",
 	                data: [10, 39, 20, 36, 15, 32, 17]
 	            }
 	        ],
@@ -732,7 +735,7 @@ var options = {
 	            height: 200,
 	            type: 'line',
 	            toolbar: {
-	                show: false
+	                show: true
 	            }
 	        },
 	        colors: ['#ee3158', '#1dbfc1'],
@@ -775,8 +778,10 @@ var options = {
 	        },
 	    };
 
-	    var chart = new ApexCharts(document.querySelector("#patients_pace"), options);
+	    var chart = new ApexCharts(document.querySelector("#two-chart"), options);
 	    chart.render();
+	    
+	    
 	    var nestedChart = echarts.init(document.getElementById('nested-pie'));
         var option = {
             

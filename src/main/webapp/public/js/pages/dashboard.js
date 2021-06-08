@@ -69,61 +69,7 @@ $(function () {
         }
         };
 
-        var chart = new ApexCharts(document.querySelector("#recent_trend"), options);
-        chart.render();
-	
-	
-	var options = {
-          series: [
-          {
-            name: "Income",
-			data: [122, 222, 142, 182]
-          }
-        ],
-          chart: {
-          height: 100,
-          width: 150,
-          type: 'area',
-          toolbar: {
-            show: false
-          }
-        },
-        colors: ['#77B6EA'],
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          curve: 'smooth',
-			width: 1,
-        },
-        grid: {
-          show: false,
-        },
-        yaxis: {
-			labels: {
-			  show: false
-			},
-			axisTicks: {
-			  show: false
-			}
-        },
-        xaxis: {
-          categories: ['Jan', 'Feb', 'Mar', 'Apr'],
-			labels: {
-			  show: false
-			},
-			axisTicks: {
-			  show: false
-			}
-        },
-        legend: {
-          show: false,
-        }
-        };
-
-        var chart = new ApexCharts(document.querySelector("#balance1"), options);
-        chart.render();
-	
+     
 	
 	
 	var options = {
