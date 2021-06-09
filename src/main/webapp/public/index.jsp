@@ -42,7 +42,7 @@
 				<a href="index.html" class="logo"> <!-- logo-->
 					<div class="logo-mini w-50">
 						<span class="light-logo"><img
-							src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
+							src="public/img/SGN_06_07_2021_1623056953999.png"
 							alt="logo" style="max-width: 128%; margin-top: 22px;"></span>
 					</div> <!--  	<div class="logo-lg" style="margin-top: 4px; margin-left: -31px;">
 						<span class="light-logo"><img
@@ -145,7 +145,7 @@
 										</p>
 										<small class="fs-10 mb-0 text-uppercase text-mute">User</small>
 									</div>
-									<img src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
+									<img src="public/img/SGN_06_07_2021_1623056953999.png"
 										class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
 								</div>
 						</a>

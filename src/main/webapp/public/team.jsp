@@ -37,7 +37,7 @@
 				<a href="index.html" class="logo"> <!-- logo-->
 					<div class="logo-mini w-50">
 						<span class="light-logo"><img
-							src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
+							src="public/img/SGN_06_07_2021_1623056953999.png"
 							alt="logo" style="max-width: 128%; margin-top: 22px;"></span>
 					</div> <!--  	<div class="logo-lg" style="margin-top: 4px; margin-left: -31px;">
 						<span class="light-logo"><img
@@ -140,7 +140,7 @@
 										</p>
 										<small class="fs-10 mb-0 text-uppercase text-mute">User</small>
 									</div>
-									<img src="https://skilledin.blob.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?sv=2020-04-08&st=2021-06-08T04%3A36%3A06Z&se=2023-06-09T04%3A36%3A00Z&sr=b&sp=r&sig=elsONA7hb5BdAaC119OQ9AYy8kRXFQ%2BFS%2BG%2FVTP9%2BYw%3D"
+									<img src="public/img/SGN_06_07_2021_1623056953999.png"
 										class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
 								</div>
 						</a>
@@ -239,7 +239,7 @@
 				  <div class="ribbon-two ribbon-two-primary"><span>Prof-Incharge</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:380px" src="https://skilledin.blob.core.windows.net/pics/teams/sc_dutta375x375.jpg?sv=2020-04-08&st=2021-06-08T04%3A40%3A06Z&se=2023-06-09T04%3A40%3A00Z&sr=b&sp=r&sig=5thY9hZ88J6U%2Fc1MIw2x6Cqv5%2FLBW%2BcfSIwB7IvvtU0%3D" alt="Prof Incharge">
+					  <img class="img-fluid" style="height:425px;width:380px" src="public/img/teams/sc_dutta375x375.jpg" alt="Prof Incharge">
 					</a>
 				  </div>
 				  <div class="box-body">
@@ -261,7 +261,7 @@
 				  <div class="ribbon-two ribbon-two-danger"><span>AI/Backend</span></div>
 				  <div class="box-header no-border p-0" style="margin-left:17px;">				
 					<a href="#">
-					  <img class="img-fluid" src="https://skilledin.blob.core.windows.net/pics/teams/raj2.jpg?sv=2020-04-08&st=2021-06-08T04%3A40%3A48Z&se=2023-06-09T04%3A40%3A00Z&sr=b&sp=r&sig=PriEA%2BTTX4SuQlFrwhDtLX6H%2ByN1KxfrQLLBAhp1%2Fg8%3D" alt="" style="height:425px;width:350px;">
+					  <img class="img-fluid" src="public/img/teams/raj2.jpg" alt="" style="height:425px;width:350px;">
 					</a>
 				  </div>
 				  <div class="box-body">
@@ -283,7 +283,7 @@
 				  <div class="ribbon-two ribbon-two-success"><span>Full Stack</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid"  style="height:425px;width:380px;" src="https://skilledin.blob.core.windows.net/pics/teams/yash_webdeveloper_2.jpg?sv=2020-04-08&st=2021-06-08T04%3A41%3A15Z&se=2023-06-09T04%3A41%3A00Z&sr=b&sp=r&sig=MttT40%2BQQR5aRQTbSU7RvNHrNI2wQ%2FKJJ1PNmnRICF8%3D" alt="">
+					  <img class="img-fluid"  style="height:425px;width:380px;" src="public/img/teams/yash_webdeveloper_2.jpg" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
@@ -305,7 +305,7 @@
 				<div class="ribbon-two ribbon-two-info"><span>UI/UX</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:590px;" src="https://skilledin.blob.core.windows.net/pics/teams/soda375.png?sv=2020-04-08&st=2021-06-08T04%3A41%3A42Z&se=2023-06-09T04%3A41%3A00Z&sr=b&sp=r&sig=vSU874Mi4SKCvGMraeiqQc0LriQmgk4z4K%2B17UU7gZc%3D" alt="">
+					  <img class="img-fluid" style="height:425px;width:590px;" src="public/img/teams/soda375.png" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
@@ -327,7 +327,7 @@
 				  <div class="ribbon-two ribbon-two-info"><span>Data Scientist</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:380px;" src="https://skilledin.blob.core.windows.net/pics/teams/sid.jpg?sv=2020-04-08&st=2021-06-08T04%3A42%3A43Z&se=2023-06-09T04%3A42%3A00Z&sr=b&sp=r&sig=G5LjrckoP3VEItAW%2BbufBMwX4vHgSEsDXsp2dn5xNqs%3D" alt="">
+					  <img class="img-fluid" style="height:425px;width:380px;" src="public/img/teams/sid.jpg" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
@@ -349,7 +349,7 @@
 				<div class="ribbon-two ribbon-two-info"><span>QA</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
-					  <img class="img-fluid" style="height:425px;width:380px;" src="https://skilledin.blob.core.windows.net/pics/teams/sonu.jpg?sv=2020-04-08&st=2021-06-08T04%3A42%3A06Z&se=2023-06-09T04%3A42%3A00Z&sr=b&sp=r&sig=pv%2BLo8IqVan4%2B60RChwsOSfDC0mlmp17gvruxz3SmKM%3D" alt="">
+					  <img class="img-fluid" style="height:425px;width:380px;" src="public/img/teams/sonu.jpg" alt="">
 					</a>
 				  </div>
 				  <div class="box-body">
