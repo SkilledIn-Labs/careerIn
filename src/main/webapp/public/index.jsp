@@ -833,10 +833,10 @@
 					<div class="chat-msg user">
 						<div class="d-flex align-items-center">
 							<span class="msg-avatar"> <img
-								src="https://skilledin.file.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?st=2021-06-07T09%3A03%3A32Z&se=2023-06-08T09%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=sA%2BxpPxQZ9AVyzGyMS6s6RHf%2Bgk%2B%2FI9QX%2FQUJ3AVHB0%3D" class="avatar avatar-lg">
+								src="public/img/r28_a.png" class="avatar avatar-lg">
 							</span>
 							<div class="mx-10">
-								<a href="#" class="text-dark hover-primary fw-bold">SkilledIn-Labs</a>
+								<a href="#" class="text-dark hover-primary fw-bold">SkilledIn-Bot</a>
 								<p class="text-muted fs-12 mb-0">2 Hours</p>
 							</div>
 						</div>
@@ -849,7 +849,7 @@
 								<p class="text-muted fs-12 mb-0">3 minutes</p>
 							</div>
 							<span class="msg-avatar"> <img
-								src="../images/avatar/2.jpg" class="avatar avatar-lg">
+								src="public/img/SGN_06_07_2021_1623056953999.png" class="avatar avatar-lg">
 							</span>
 						</div>
 						<div class="cm-msg-text">My name is user.</div>
@@ -857,10 +857,10 @@
 					<div class="chat-msg user">
 						<div class="d-flex align-items-center">
 							<span class="msg-avatar"> <img
-								src="https://skilledin.file.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?st=2021-06-07T09%3A03%3A32Z&se=2023-06-08T09%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=sA%2BxpPxQZ9AVyzGyMS6s6RHf%2Bgk%2B%2FI9QX%2FQUJ3AVHB0%3D" class="avatar avatar-lg">
+								src="public/img/r28_a.png" class="avatar avatar-lg">
 							</span>
 							<div class="mx-10">
-								<a href="#" class="text-dark hover-primary fw-bold">MayraSkilledIn-Labs</a>
+								<a href="#" class="text-dark hover-primary fw-bold">SkilledIn-Bot</a>
 								<p class="text-muted fs-12 mb-0">40 seconds</p>
 							</div>
 						</div>

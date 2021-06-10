@@ -23,7 +23,7 @@ $(function() {
     setTimeout(function() {
 		
 	var fake = [
-	  'Did you purchase the template?'
+	  'This app is under development. We will respond once we get funded...'
 	];
       generate_button_message(fake, 'user');  
     }, 1000)
@@ -42,7 +42,7 @@ $(function() {
     str += "          <\/p>";
     str += "          <\/div>";
     str += "          <span class=\"msg-avatar\">";
-    str += "            <img src=\"../images/avatar/3.jpg\"  class=\"avatar avatar-lg\">";
+    str += "            <img src=\"public/img/SGN_06_07_2021_1623056953999.png\"  class=\"avatar avatar-lg\">";
     str += "          <\/span>"; 
     str += "          <\/div>"; 
     str += "          <div class=\"cm-msg-text\">";
@@ -64,10 +64,10 @@ $(function() {
 	str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";    
     str += "          <div class=\"d-flex align-items-center\">";  
     str += "          <span class=\"msg-avatar\">";
-    str += "            <img src=\"../images/avatar/2.jpg\"  class=\"avatar avatar-lg\">";
+    str += "            <img src=\"public/img/r28_a.png\"  class=\"avatar avatar-lg\">";
     str += "          <\/span>";
     str += "          <div class=\"mx-10\">"; 
-    str += "          <a href=\"#\" class=\"text-dark hover-primary font-weight-bold\">Mayra Sibley";
+    str += "          <a href=\"#\" class=\"text-dark hover-primary font-weight-bold\">SkilledIn-Bot";
     str += "          <\/a>";
     str += "          <p class=\"text-muted font-size-12 mb-0\">Just now";
     str += "          <\/p>";

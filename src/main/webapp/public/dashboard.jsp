@@ -470,7 +470,6 @@
 		</a>
 	</div>
 	<!-- Sidebar -->
-
 	<div id="chat-box-body">
 		<div id="chat-circle"
 			class="waves-effect waves-circle btn btn-circle btn-lg btn-warning l-h-70">
@@ -517,7 +516,7 @@
 					</div>
 				</div>
 				<div class="text-center flex-grow-1">
-					<div class="text-dark fs-18">Mayra Sibley</div>
+					<div class="text-dark fs-18">SkilledIn Labs</div>
 					<div>
 						<span class="badge badge-sm badge-dot badge-primary"></span> <span
 							class="text-muted fs-12">Active</span>
@@ -538,15 +537,14 @@
 					<div class="chat-msg user">
 						<div class="d-flex align-items-center">
 							<span class="msg-avatar"> <img
-								src="../images/avatar/2.jpg" class="avatar avatar-lg">
+								src="public/img/r28_a.png" class="avatar avatar-lg">
 							</span>
 							<div class="mx-10">
-								<a href="#" class="text-dark hover-primary fw-bold">Mayra
-									Sibley</a>
+								<a href="#" class="text-dark hover-primary fw-bold">SkilledIn-Bot</a>
 								<p class="text-muted fs-12 mb-0">2 Hours</p>
 							</div>
 						</div>
-						<div class="cm-msg-text">Hi there, I'm Jesse and you?</div>
+						<div class="cm-msg-text">Hi there, How can I help you?</div>
 					</div>
 					<div class="chat-msg self">
 						<div class="d-flex align-items-center justify-content-end">
@@ -555,24 +553,23 @@
 								<p class="text-muted fs-12 mb-0">3 minutes</p>
 							</div>
 							<span class="msg-avatar"> <img
-								src="../images/avatar/3.jpg" class="avatar avatar-lg">
+								src="public/img/SGN_06_07_2021_1623056953999.png" class="avatar avatar-lg">
 							</span>
 						</div>
-						<div class="cm-msg-text">My name is Anne Clarc.</div>
+						<div class="cm-msg-text">My name is user.</div>
 					</div>
 					<div class="chat-msg user">
 						<div class="d-flex align-items-center">
 							<span class="msg-avatar"> <img
-								src="../images/avatar/2.jpg" class="avatar avatar-lg">
+								src="public/img/r28_a.png" class="avatar avatar-lg">
 							</span>
 							<div class="mx-10">
-								<a href="#" class="text-dark hover-primary fw-bold">Mayra
-									Sibley</a>
+								<a href="#" class="text-dark hover-primary fw-bold">SkilledIn-Bot</a>
 								<p class="text-muted fs-12 mb-0">40 seconds</p>
 							</div>
 						</div>
 						<div class="cm-msg-text">
-							Nice to meet you Anne.<br>How can i help you?
+							Nice to meet you User.<br>How can i help you?
 						</div>
 					</div>
 				</div>
@@ -588,6 +585,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<!-- Page Content overlay -->
 
