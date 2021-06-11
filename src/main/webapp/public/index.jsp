@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon"
-	href="https://skilledin.file.core.windows.net/pics/SGN_06_07_2021_1623056953999.png?st=2021-06-07T09%3A03%3A32Z&se=2023-06-08T09%3A03%3A00Z&sp=rl&sv=2018-03-28&sr=f&sig=sA%2BxpPxQZ9AVyzGyMS6s6RHf%2Bgk%2B%2FI9QX%2FQUJ3AVHB0%3D">
+	href="public/img/SGN_06_07_2021_1623056953999.png">
 
 <title>SkilledIn</title>
 
@@ -185,14 +185,14 @@
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li><a href="/team"> <i
+							<li><a href="/about"> <i
 									class="fas fa-code"></i> <span>About Us</span> <span
 									class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li><a href="/team"> <i
-									class="fas fa-folder"></i> <span>Something</span> <span
+							<li><a href="/privacy"> <i
+									class="fas fa-user-secret"></i> <span>Privacy</span> <span
 									class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
@@ -765,7 +765,8 @@
 				class="path2"></span></span>
 		</a>
 	</div>
-
+	<!-- Sidebar -->
+	
 	<div id="chat-box-body">
 		<div id="chat-circle"
 			class="waves-effect waves-circle btn btn-circle btn-lg btn-warning l-h-70">
@@ -881,6 +882,124 @@
 			</div>
 		</div>
 	</div>
+	<!-- Sidebar -->
+	
+	<div id="chat-box-body">
+		<div id="chat-circle"
+			class="waves-effect waves-circle btn btn-circle btn-lg btn-warning l-h-70">
+			<div id="chat-overlay"></div>
+			<span class="icon-Group-chat fs-30"><span class="path1"></span><span
+				class="path2"></span></span>
+		</div>
+
+		<div class="chat-box">
+			<div
+				class="chat-box-header p-15 d-flex justify-content-between align-items-center">
+				<div class="btn-group">
+					<button
+						class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45"
+						type="button" data-bs-toggle="dropdown">
+						<span class="icon-Add-user fs-22"><span class="path1"></span><span
+							class="path2"></span></span>
+					</button>
+					<div class="dropdown-menu min-w-200">
+						<a class="dropdown-item fs-16" href="#"> <span
+							class="icon-Color me-15"></span> New Group
+						</a> <a class="dropdown-item fs-16" href="#"> <span
+							class="icon-Clipboard me-15"><span class="path1"></span><span
+								class="path2"></span><span class="path3"></span><span
+								class="path4"></span></span> Contacts
+						</a> <a class="dropdown-item fs-16" href="#"> <span
+							class="icon-Group me-15"><span class="path1"></span><span
+								class="path2"></span></span> Groups
+						</a> <a class="dropdown-item fs-16" href="#"> <span
+							class="icon-Active-call me-15"><span class="path1"></span><span
+								class="path2"></span></span> Calls
+						</a> <a class="dropdown-item fs-16" href="#"> <span
+							class="icon-Settings1 me-15"><span class="path1"></span><span
+								class="path2"></span></span> Settings
+						</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item fs-16" href="#"> <span
+							class="icon-Question-circle me-15"><span class="path1"></span><span
+								class="path2"></span></span> Help
+						</a> <a class="dropdown-item fs-16" href="#"> <span
+							class="icon-Notifications me-15"><span class="path1"></span><span
+								class="path2"></span></span> Privacy
+						</a>
+					</div>
+				</div>
+				<div class="text-center flex-grow-1">
+					<div class="text-dark fs-18">SkilledIn Labs</div>
+					<div>
+						<span class="badge badge-sm badge-dot badge-primary"></span> <span
+							class="text-muted fs-12">Active</span>
+					</div>
+				</div>
+				<div class="chat-box-toggle">
+					<button id="chat-box-toggle"
+						class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45"
+						type="button">
+						<span class="icon-Close fs-22"><span class="path1"></span><span
+							class="path2"></span></span>
+					</button>
+				</div>
+			</div>
+			<div class="chat-box-body">
+				<div class="chat-box-overlay"></div>
+				<div class="chat-logs">
+					<div class="chat-msg user">
+						<div class="d-flex align-items-center">
+							<span class="msg-avatar"> <img
+								src="public/img/r28_a.png" class="avatar avatar-lg">
+							</span>
+							<div class="mx-10">
+								<a href="#" class="text-dark hover-primary fw-bold">SkilledIn-Bot</a>
+								<p class="text-muted fs-12 mb-0">2 Hours</p>
+							</div>
+						</div>
+						<div class="cm-msg-text">Hi there, How can I help you?</div>
+					</div>
+					<div class="chat-msg self">
+						<div class="d-flex align-items-center justify-content-end">
+							<div class="mx-10">
+								<a href="#" class="text-dark hover-primary fw-bold">You</a>
+								<p class="text-muted fs-12 mb-0">3 minutes</p>
+							</div>
+							<span class="msg-avatar"> <img
+								src="public/img/SGN_06_07_2021_1623056953999.png" class="avatar avatar-lg">
+							</span>
+						</div>
+						<div class="cm-msg-text">My name is user.</div>
+					</div>
+					<div class="chat-msg user">
+						<div class="d-flex align-items-center">
+							<span class="msg-avatar"> <img
+								src="public/img/r28_a.png" class="avatar avatar-lg">
+							</span>
+							<div class="mx-10">
+								<a href="#" class="text-dark hover-primary fw-bold">SkilledIn-Bot</a>
+								<p class="text-muted fs-12 mb-0">40 seconds</p>
+							</div>
+						</div>
+						<div class="cm-msg-text">
+							Nice to meet you User.<br>How can i help you?
+						</div>
+					</div>
+				</div>
+				<!--chat-log -->
+			</div>
+			<div class="chat-input">
+				<form>
+					<input type="text" id="chat-input" placeholder="Send a message..." />
+					<button type="submit" class="chat-submit" id="chat-submit">
+						<span class="icon-Send fs-22"></span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
 
 	<!-- Page Content overlay -->
 

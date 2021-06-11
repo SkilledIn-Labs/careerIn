@@ -23,7 +23,7 @@ $(function() {
     setTimeout(function() {
 		
 	var fake = [
-	  'This app is under development. We will respond once we get funded...'
+	  'This app is under development. Please mail us if you want this feature...'
 	];
       generate_button_message(fake, 'user');  
     }, 1000)

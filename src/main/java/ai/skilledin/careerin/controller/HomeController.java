@@ -24,6 +24,11 @@ public class HomeController {
 		return "login";
 	}
 
+	@RequestMapping("/about")
+	public String aboutUs() {
+		return "aboutUs";
+	}
+
 	@RequestMapping("/dashboard")
 	public String dashboard() {
 		return "dashboard";

@@ -184,14 +184,14 @@
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li><a href="/team"> <i
+							<li><a href="/about"> <i
 									class="fas fa-code"></i> <span>About Us</span> <span
 									class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
 								</ul></li>
-							<li><a href="/team"> <i
-									class="fas fa-folder"></i> <span>Something</span> <span
+							<li><a href="/privacy"> <i
+									class="fas fa-user-secret"></i> <span>Privacy</span> <span
 									class="pull-right-container"> </span>
 							</a>
 								<ul class="treeview-menu">
