@@ -57,7 +57,7 @@
 						<div class="actions">
 							<ul>
 								<li><span class="js-btn-prev" title="Previous"><a
-										href="index.html">Previous Question</a></span></li>
+										href="/">Previous Question</a></span></li>
 							</ul>
 						</div>
 					</div>

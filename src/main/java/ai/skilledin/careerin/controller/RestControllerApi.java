@@ -1,6 +1,7 @@
 package ai.skilledin.careerin.controller;
 
 import java.util.List;
+import java.util.TreeMap;
 
 import javax.servlet.http.HttpSession;
 import javax.ws.rs.core.Response;
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +24,7 @@ import ai.skilledin.careerin.dao.TrainingAnswersDao;
 import ai.skilledin.careerin.dao.UserDao;
 import ai.skilledin.careerin.dao.models.Authorities;
 import ai.skilledin.careerin.dao.models.PredictionPOJO;
+import ai.skilledin.careerin.dao.models.PredictionResponseWrapper;
 import ai.skilledin.careerin.dao.models.TrainingAnswers;
 import ai.skilledin.careerin.dao.models.User;
 
@@ -62,15 +65,27 @@ public class RestControllerApi {
 	public TrainingAnswersDao trainingAnswersDao;
 
 	@PostMapping("/api/predict")
-	public Response predict(@RequestBody PredictionPOJO roleModel, HttpSession session) {
-		logger.info("" + roleModel);
-		autoML.getRoleIdFromPredictionModel(roleModel);
-		session.setAttribute("roleId", roleModel.getRole_id());
-		String roleNameFromRoleId = autoML.getRoleNameFromRoleId(roleModel.getRole_id());
-		session.setAttribute("roleName", roleNameFromRoleId);
-		logger.info("prediction --> " + roleNameFromRoleId);
+	public PredictionResponseWrapper predict(@RequestBody PredictionPOJO roleModel, HttpSession session, Model m) {
+		// get ScoreCard of Results
+		TreeMap<Double, String> roleIdFromPredictionModel = autoML.getRoleIdFromPredictionModel(roleModel);
+
+		String roleId = roleIdFromPredictionModel.firstEntry().getValue();
+
+		// adding roleId to session
+		session.setAttribute("roleId", roleId);
+
+		// get role name from database
+		String roleName = autoML.getRoleNameFromRoleId(roleId);
+		session.setAttribute("roleName", roleName);
+		logger.info("prediction --> " + roleName);
 		roleModelDao.save(roleModel);
-		return Response.status(200).entity(roleModel).build();
+
+		logger.info("saved ->" + roleModel);
+		PredictionResponseWrapper makePredictionWrapper = autoML.makePredictionWrapper(roleIdFromPredictionModel);
+		logger.info(makePredictionWrapper.toString());
+		session.setAttribute("prediction", makePredictionWrapper);
+
+		return makePredictionWrapper;
 
 	}
 

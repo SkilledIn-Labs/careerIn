@@ -11,6 +11,7 @@ public class Roles {
 	private String rid;
 	private String role_name;
 	private String shortName;
+	private String img;
 
 	public String getRid() {
 		return rid;
@@ -39,6 +40,14 @@ public class Roles {
 	@Override
 	public String toString() {
 		return "Roles [rid=" + rid + ", role_name=" + role_name + ", shortName=" + shortName + "]";
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 }

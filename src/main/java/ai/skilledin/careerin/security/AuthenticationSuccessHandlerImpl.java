@@ -37,9 +37,10 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
 			userName = ((User) authentication.getPrincipal()).getUsername();
 		}
 		logger.info("userName: " + userName);
+
 		// HttpSession session = request.getSession();
 		session.setAttribute("userName", userName);
-		response.sendRedirect("/index.jsp");
+		response.sendRedirect("/");
 
 	}
 

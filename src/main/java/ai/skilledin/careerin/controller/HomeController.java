@@ -14,9 +14,34 @@ public class HomeController {
 		return "index";
 	}
 
-	@RequestMapping("/thankyou")
-	public String thankyou() {
-		return "thankyou";
+	@RequestMapping("/home")
+	public String index() {
+		return "index";
+	}
+
+	@RequestMapping("/loginPage")
+	public String login() {
+		return "login";
+	}
+
+	@RequestMapping("/about")
+	public String aboutUs() {
+		return "aboutUs";
+	}
+
+	@RequestMapping("/privacy")
+	public String privacy() {
+		return "privacy";
+	}
+
+	@RequestMapping("/dashboard")
+	public String dashboard() {
+		return "dashboard";
+	}
+
+	@RequestMapping("/team")
+	public String team() {
+		return "team";
 	}
 
 	@RequestMapping("user")
