@@ -266,7 +266,7 @@
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a target="_blank" href="github.com/theroyalraj/" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a target="_blank" href="https://www.github.com/theroyalraj/" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
 							<a target="_blank" href="https://api.whatsapp.com/send?phone=917870455443&text=Hi%20Utkarsh%20Raj" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
 							<a target="_blank" href="https://www.linkedin.com/in/theroyalraj/" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
 							<a target="_blank" href=" mailto:utraj00114@gmail.com?subject=Skilledin&body=Hi" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
@@ -396,7 +396,7 @@
 			title="Email" class="waves-effect waves-light  btn-warning mb-5 btn-sm"
 			target="_blank"> <span class="fas fa-envelope"><span
 				class="path1"></span><span class="path2"></span></span>
-		</a> <a href="https://github.com/skilledIn-Labs/careerIn" data-bs-toggle="tooltip" data-bs-placement="left"
+		</a> <a href="https://github.com/SkilledIn-Labs/" data-bs-toggle="tooltip" data-bs-placement="left"
 			title="Github" class="waves-effect waves-light btn-flat mb-5 btn-sm"
 			target="_blank"> <span class="fab fa-github"></span>
 		</a> <a id="chat-popup" href="#" data-bs-toggle="tooltip"
