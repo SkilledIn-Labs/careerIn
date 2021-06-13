@@ -459,7 +459,7 @@
 			title="Email" class="waves-effect waves-light  btn-warning mb-5 btn-sm"
 			target="_blank"> <span class="fas fa-envelope"><span
 				class="path1"></span><span class="path2"></span></span>
-		</a> <a href="https://github.com/skilledIn-Labs/careerIn" data-bs-toggle="tooltip" data-bs-placement="left"
+		</a> <a href="https://github.com/SkilledIn-Labs/" data-bs-toggle="tooltip" data-bs-placement="left"
 			title="Github" class="waves-effect waves-light btn-flat mb-5 btn-sm"
 			target="_blank"> <span class="fab fa-github"></span>
 		</a> <a id="chat-popup" href="#" data-bs-toggle="tooltip"
