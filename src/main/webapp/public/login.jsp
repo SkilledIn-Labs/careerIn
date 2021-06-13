@@ -74,8 +74,35 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 		crossorigin="anonymous"></script>
+
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- partial -->
 	<script type="text/javascript">
+	var urlParams;
+	$(document).ready(function() {
+		urlParams = new URLSearchParams(window.location.search);
+		const name = urlParams.get('name');
+		const email = urlParams.get('email');
+		const error = urlParams.get('error');
+		if(!!email){
+			swal({
+				  title: "Account Created!",
+				  text: "Please login using the same credentials!",
+				  icon: "success",
+				  button: "Go Back!",
+				});
+		}
+	if(error === 'true'){
+		swal({
+			  title: "Login Failed",
+			  text: "Check Your Login Credentials",
+			  icon: "warning",
+			  buttons: "Login Again!",
+			});
+
+	}
+	});
                         const signUpButton = document.getElementById('signUp');
                         const signInButton = document.getElementById('signIn');
                         const container = document.getElementById('container');
