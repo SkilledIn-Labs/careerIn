@@ -171,7 +171,7 @@ $(".validation-wizard").steps({
 		setTimeout(function() {
         swal({
             title: "Submitted!",
-            text: "Go To Dashboard to see the Result! \n Please wait while we prepare the dashboard",
+            text: "Go To Dashboard to see the Result!! \n Please wait while we prepare the dashboard",
             type: "success"
         }, function() {
             window.location = "/dashboard";
