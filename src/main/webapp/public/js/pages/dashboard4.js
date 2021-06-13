@@ -1,7 +1,7 @@
 //[Dashboard Javascript]
 
 //Project:	Rhythm Admin - Responsive Admin Template
-//Primary use:   Used only for the main dashboard (index.html)
+//Primary use:   Used only for the main dashboard (/)
 
 
 $(function () {

@@ -3,19 +3,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from multipurposethemes.com/admin/rhythm-admin-template/bs5/main/doctor_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 05:22:48 GMT -->
 <head>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://multipurposethemes.com/admin/rhythm-admin-template/bs5/images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
 	integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
 	crossorigin="anonymous" />
-    <title>Rhythm Admin - Dashboard</title>
+    <title>Team</title>
   
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="public/css/vendors_css.css">
@@ -34,7 +33,7 @@
 		<header class="main-header">
 			<div class="d-flex align-items-center logo-box justify-content-start">
 				<!-- Logo -->
-				<a href="index.html" class="logo"> <!-- logo-->
+				<a href="/" class="logo"> <!-- logo-->
 					<div class="logo-mini w-50">
 						<span class="light-logo"><img
 							src="public/img/SGN_06_07_2021_1623056953999.png"
@@ -267,10 +266,10 @@
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
+							<a target="_blank" href="github.com/theroyalraj/" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a target="_blank" href="https://api.whatsapp.com/send?phone=917870455443&text=Hi%20Utkarsh%20Raj" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/in/theroyalraj/" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
+							<a target="_blank" href=" mailto:utraj00114@gmail.com?subject=Skilledin&body=Hi" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Utkarsh Raj</a></h3>
 						<h6 class="user-info mt-0 mb-10 text-fade">AI & Backend Engineer</h6>
@@ -397,7 +396,7 @@
 			title="Email" class="waves-effect waves-light  btn-warning mb-5 btn-sm"
 			target="_blank"> <span class="fas fa-envelope"><span
 				class="path1"></span><span class="path2"></span></span>
-		</a> <a href="#" data-bs-toggle="tooltip" data-bs-placement="left"
+		</a> <a href="https://github.com/skilledIn-Labs/careerIn" data-bs-toggle="tooltip" data-bs-placement="left"
 			title="Github" class="waves-effect waves-light btn-flat mb-5 btn-sm"
 			target="_blank"> <span class="fab fa-github"></span>
 		</a> <a id="chat-popup" href="#" data-bs-toggle="tooltip"
@@ -534,12 +533,10 @@
 	<script src="public/js/pages/chat-popup.js"></script>
     <script src="assets/icons/feather-icons/feather.min.js"></script>	
 	
-	<!-- Rhythm Admin App -->
 	<script src="public/js/template.js"></script>
 	
 	
 
 </body>
 
-<!-- Mirrored from multipurposethemes.com/admin/rhythm-admin-template/bs5/main/doctor_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 05:22:53 GMT -->
 </html>

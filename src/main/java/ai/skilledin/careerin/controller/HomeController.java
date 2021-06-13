@@ -29,6 +29,11 @@ public class HomeController {
 		return "aboutUs";
 	}
 
+	@RequestMapping("/privacy")
+	public String privacy() {
+		return "privacy";
+	}
+
 	@RequestMapping("/dashboard")
 	public String dashboard() {
 		return "dashboard";

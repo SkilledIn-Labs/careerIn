@@ -39,7 +39,7 @@
 		<header class="main-header">
 			<div class="d-flex align-items-center logo-box justify-content-start">
 				<!-- Logo -->
-				<a href="index.html" class="logo"> <!-- logo-->
+				<a href="/" class="logo"> <!-- logo-->
 					<div class="logo-mini w-50">
 						<span class="light-logo"><img
 							src="public/img/SGN_06_07_2021_1623056953999.png"
@@ -755,7 +755,7 @@
 			title="Email" class="waves-effect waves-light  btn-warning mb-5 btn-sm"
 			target="_blank"> <span class="fas fa-envelope"><span
 				class="path1"></span><span class="path2"></span></span>
-		</a> <a href="#" data-bs-toggle="tooltip" data-bs-placement="left"
+		</a> <a href="https://github.com/skilledIn-Labs/careerIn" data-bs-toggle="tooltip" data-bs-placement="left"
 			title="Github" class="waves-effect waves-light btn-flat mb-5 btn-sm"
 			target="_blank"> <span class="fab fa-github"></span>
 		</a> <a id="chat-popup" href="#" data-bs-toggle="tooltip"

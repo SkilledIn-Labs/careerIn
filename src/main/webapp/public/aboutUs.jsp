@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from multipurposethemes.com/admin/rhythm-admin-template/bs5/main/forms_wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Jun 2021 05:23:41 GMT -->
 
 <head>
 <meta charset="utf-8">
@@ -11,8 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon"
-	href="public/img/SGN_06_07_2021_1623056953999.png">
+<link rel="icon" href="public/img/SGN_06_07_2021_1623056953999.png">
 
 <title>SkilledIn</title>
 
@@ -38,7 +36,7 @@
 		<header class="main-header">
 			<div class="d-flex align-items-center logo-box justify-content-start">
 				<!-- Logo -->
-				<a href="index.html" class="logo"> <!-- logo-->
+				<a href="/" class="logo"> <!-- logo-->
 					<div class="logo-mini w-50">
 						<span class="light-logo"><img
 							src="public/img/SGN_06_07_2021_1623056953999.png" alt="logo"
@@ -271,13 +269,19 @@
 														<div class="panel-heading" id="question-1" role="tab">
 															<a class="panel-title" aria-controls="answer-1"
 																aria-expanded="true" data-bs-toggle="collapse"
-																href="#answer-1" data-parent="#accordion2"> What is
-																this? </a>
+																href="#answer-1" data-parent="#accordion2"> Who we
+																are? </a>
 														</div>
 														<div class="panel-collapse collapse show" id="answer-1"
 															aria-labelledby="question-1" role="tabpanel"
 															data-bs-parent="#category-1">
-															<div class="panel-body">AI project</div>
+															<div class="panel-body">We are a team of 5
+																roommates along with our professor in charge of Computer
+																Science Engineering Dept. of BIT Sindri. We are skilled
+																in development, designing, data manipulation, machine
+																learning, AI and testing. We, the developers of
+																SkilledIn wants you to choose the career you fit in the
+																best.</div>
 														</div>
 													</div>
 													<!-- End Question 1 -->
@@ -286,13 +290,18 @@
 														<div class="panel-heading" id="question-2" role="tab">
 															<a class="panel-title" aria-controls="answer-2"
 																aria-expanded="false" data-bs-toggle="collapse"
-																href="#answer-2" data-parent="#accordion2"> How does
-																it work? </a>
+																href="#answer-2" data-parent="#accordion2"> What is
+																this project? </a>
 														</div>
 														<div class="panel-collapse collapse" id="answer-2"
 															aria-labelledby="question-2" role="tabpanel"
 															data-bs-parent="#category-1">
-															<div class="panel-body">Algorithms</div>
+															<div class="panel-body">This project is user
+																friendly and simple to use. Simply sign up, login, fill
+																the 4 sections of the form namely academics, technical,
+																interests and miscellaneous and go to the dashboard to
+																see what career role fits best for your personality and
+																skill set.</div>
 														</div>
 													</div>
 													<!-- End Question 2 -->
@@ -301,13 +310,18 @@
 														<div class="panel-heading" id="question-3" role="tab">
 															<a class="panel-title" aria-controls="answer-3"
 																aria-expanded="false" data-bs-toggle="collapse"
-																href="#answer-3" data-parent="#accordion2"> where
-																can I see the source code? </a>
+																href="#answer-3" data-parent="#accordion2"> How to
+																use this project? </a>
 														</div>
 														<div class="panel-collapse collapse" id="answer-3"
 															aria-labelledby="question-3" role="tabpanel"
 															data-bs-parent="#category-1">
-															<div class="panel-body">Github</div>
+															<div class="panel-body">This project is user
+																friendly and simple to use. Simply sign up, login, fill
+																the 4 sections of the form namely academics, technical,
+																interests and miscellaneous and go to the dashboard to
+																see what career role fits best for your personality and
+																skill set</div>
 														</div>
 													</div>
 													<!-- End Question 3 -->
@@ -322,8 +336,12 @@
 														<div class="panel-collapse collapse" id="answer-4"
 															aria-labelledby="question-4" role="tabpanel"
 															data-bs-parent="#category-1">
-															<div class="panel-body">fork -> edit -> pull
-																request</div>
+															<div class="panel-body">
+																Go to Github page of <a target="_blank"
+																	href="https://github.com/skilledIn-Labs/careerIn">SkilledIn</a>
+																and clone the careerin project. Follow steps specified
+																in Readme.md to make contribution
+															</div>
 														</div>
 													</div>
 													<!-- End Question 4 -->
@@ -373,31 +391,16 @@
 														<div class="panel-heading" id="question-8" role="tab">
 															<a class="panel-title" aria-controls="answer-8"
 																aria-expanded="true" data-bs-toggle="collapse"
-																href="#answer-8" data-parent="#accordion1"> Proin ac
-																velit non neque efficitur pretium a a nunc? </a>
+																href="#answer-8" data-parent="#accordion1"> Web
+																Scraping </a>
 														</div>
 														<div class="panel-collapse collapse show" id="answer-8"
 															aria-labelledby="question-8" role="tabpanel"
 															data-bs-parent="#category-3">
-															<div class="panel-body">I must explain to you how
-																all this mistaken idea of denouncing pleasure and
-																praising pain was born and I will give you a complete
-																account of the system, and expound the actual teachings
-																of the great explorer of the truth, the master-builder
-																of human happiness. No one rejects, dislikes, or avoids
-																pleasure itself, because it is pleasure, but because
-																those who do not know how to pursue pleasure rationally
-																encounter consequences that are extremely painful. Nor
-																again is there anyone who loves or pursues or desires to
-																obtain pain of itself, because it is pain, but because
-																occasionally circumstances occur in which toil and pain
-																can procure him some great pleasure. To take a trivial
-																example, which of us ever undertakes laborious physical
-																exercise, except to obtain some advantage from it? But
-																who has any right to find fault with a man who chooses
-																to enjoy a pleasure that has no annoying consequences,
-																or one who avoids a pain that produces no resultant
-																pleasure?</div>
+															<div class="panel-body">Scraping the Web for latest
+																trends, demands & requirements of the market using
+																advanced AI techniques to give more insights on the
+																current market needs.</div>
 														</div>
 													</div>
 													<!-- End Question 8 -->
@@ -406,31 +409,18 @@
 														<div class="panel-heading" id="question-9" role="tab">
 															<a class="panel-title" aria-controls="answer-9"
 																aria-expanded="false" data-bs-toggle="collapse"
-																href="#answer-9" data-parent="#accordion1"> Nam
-																egestas massa vitae magna interdum volutpat? </a>
+																href="#answer-9" data-parent="#accordion1"> Self
+																Correction loop. </a>
 														</div>
 														<div class="panel-collapse collapse" id="answer-9"
 															aria-labelledby="question-9" role="tabpanel"
 															data-bs-parent="#category-3">
-															<div class="panel-body">I must explain to you how
-																all this mistaken idea of denouncing pleasure and
-																praising pain was born and I will give you a complete
-																account of the system, and expound the actual teachings
-																of the great explorer of the truth, the master-builder
-																of human happiness. No one rejects, dislikes, or avoids
-																pleasure itself, because it is pleasure, but because
-																those who do not know how to pursue pleasure rationally
-																encounter consequences that are extremely painful. Nor
-																again is there anyone who loves or pursues or desires to
-																obtain pain of itself, because it is pain, but because
-																occasionally circumstances occur in which toil and pain
-																can procure him some great pleasure. To take a trivial
-																example, which of us ever undertakes laborious physical
-																exercise, except to obtain some advantage from it? But
-																who has any right to find fault with a man who chooses
-																to enjoy a pleasure that has no annoying consequences,
-																or one who avoids a pain that produces no resultant
-																pleasure?</div>
+															<div class="panel-body">A Self Correcting/feedback
+																loop can be integrated to enhance the correctness or
+																efficiency of the prediction based on the selected
+																option from the end user. It will show the difference
+																between prediction from our model and actual interest of
+																the student.</div>
 														</div>
 													</div>
 													<!-- End Question 9 -->
@@ -439,34 +429,43 @@
 														<div class="panel-heading" id="question-10" role="tab">
 															<a class="panel-title" aria-controls="answer-10"
 																aria-expanded="false" data-bs-toggle="collapse"
-																href="#answer-10" data-parent="#accordion1">
-																Praesent pretium leo sed turpis vehicula semper? </a>
+																href="#answer-10" data-parent="#accordion1"> Reverse
+																Prediction </a>
 														</div>
 														<div class="panel-collapse collapse" id="answer-10"
 															aria-labelledby="question-10" role="tabpanel"
 															data-bs-parent="#category-3">
-															<div class="panel-body">I must explain to you how
-																all this mistaken idea of denouncing pleasure and
-																praising pain was born and I will give you a complete
-																account of the system, and expound the actual teachings
-																of the great explorer of the truth, the master-builder
-																of human happiness. No one rejects, dislikes, or avoids
-																pleasure itself, because it is pleasure, but because
-																those who do not know how to pursue pleasure rationally
-																encounter consequences that are extremely painful. Nor
-																again is there anyone who loves or pursues or desires to
-																obtain pain of itself, because it is pain, but because
-																occasionally circumstances occur in which toil and pain
-																can procure him some great pleasure. To take a trivial
-																example, which of us ever undertakes laborious physical
-																exercise, except to obtain some advantage from it? But
-																who has any right to find fault with a man who chooses
-																to enjoy a pleasure that has no annoying consequences,
-																or one who avoids a pain that produces no resultant
-																pleasure?</div>
+															<div class="panel-body">After analyzing the model
+																based on the current dataset a predictive algorithm can
+																be implemented to find what are the desired inputs i.e.
+																marks or interests one should have to achieve his/her
+																desired goal.</div>
 														</div>
 													</div>
 													<!-- End Question 10 -->
+
+
+													<!-- Question 11 -->
+													<div class="panel">
+														<div class="panel-heading" id="question-11" role="tab">
+															<a class="panel-title" aria-controls="answer-11"
+																aria-expanded="false" data-bs-toggle="collapse"
+																href="#answer-11" data-parent="#accordion3">
+																Enhanced WebApp </a>
+														</div>
+														<div class="panel-collapse collapse" id="answer-11"
+															aria-labelledby="question-11" role="tabpanel"
+															data-bs-parent="#category-4">
+															<div class="panel-body">Various tests like
+																technical, analytical, logical, memory based,
+																psychometry, general awareness, interests and skill
+																based tests can be implemented using advanced web apps
+																and AI. Thes test will be the input for the model
+																instead of feeding it manually which makes the model
+																more reliable and efficient.</div>
+														</div>
+													</div>
+													<!-- End Question 11 -->
 												</div>
 											</div>
 											<!-- End Categroy 3 -->
@@ -478,107 +477,49 @@
 												<div
 													class="panel-group panel-group-simple panel-group-continuous"
 													id="accordion3" aria-multiselectable="true" role="tablist">
-													<!-- Question 11 -->
-													<div class="panel">
-														<div class="panel-heading" id="question-11" role="tab">
-															<a class="panel-title" aria-controls="answer-11"
-																aria-expanded="true" data-bs-toggle="collapse"
-																href="#answer-11" data-parent="#accordion3"> Sed
-																quis nunc bibendum, luctus nulla non, luctus odio? </a>
-														</div>
-														<div class="panel-collapse collapse show" id="answer-11"
-															aria-labelledby="question-11" role="tabpanel"
-															data-bs-parent="#category-4">
-															<div class="panel-body">I must explain to you how
-																all this mistaken idea of denouncing pleasure and
-																praising pain was born and I will give you a complete
-																account of the system, and expound the actual teachings
-																of the great explorer of the truth, the master-builder
-																of human happiness. No one rejects, dislikes, or avoids
-																pleasure itself, because it is pleasure, but because
-																those who do not know how to pursue pleasure rationally
-																encounter consequences that are extremely painful. Nor
-																again is there anyone who loves or pursues or desires to
-																obtain pain of itself, because it is pain, but because
-																occasionally circumstances occur in which toil and pain
-																can procure him some great pleasure. To take a trivial
-																example, which of us ever undertakes laborious physical
-																exercise, except to obtain some advantage from it? But
-																who has any right to find fault with a man who chooses
-																to enjoy a pleasure that has no annoying consequences,
-																or one who avoids a pain that produces no resultant
-																pleasure?</div>
-														</div>
-													</div>
-													<!-- End Question 11 -->
+
 													<!-- Question 12 -->
 													<div class="panel">
 														<div class="panel-heading" id="question-12" role="tab">
 															<a class="panel-title" aria-controls="answer-12"
-																aria-expanded="false" data-bs-toggle="collapse"
-																href="#answer-12" data-parent="#accordion3"> Mauris
-																sit amet justo pharetra, venenatis purus eu, efficitur
-																nunc? </a>
+																aria-expanded="true" data-bs-toggle="collapse"
+																href="#answer-12" data-parent="#accordion3">
+																References </a>
 														</div>
-														<div class="panel-collapse collapse" id="answer-12"
+														<div class="panel-collapse collapse show" id="answer-12"
 															aria-labelledby="question-12" role="tabpanel"
 															data-bs-parent="#category-4">
-															<div class="panel-body">I must explain to you how
-																all this mistaken idea of denouncing pleasure and
-																praising pain was born and I will give you a complete
-																account of the system, and expound the actual teachings
-																of the great explorer of the truth, the master-builder
-																of human happiness. No one rejects, dislikes, or avoids
-																pleasure itself, because it is pleasure, but because
-																those who do not know how to pursue pleasure rationally
-																encounter consequences that are extremely painful. Nor
-																again is there anyone who loves or pursues or desires to
-																obtain pain of itself, because it is pain, but because
-																occasionally circumstances occur in which toil and pain
-																can procure him some great pleasure. To take a trivial
-																example, which of us ever undertakes laborious physical
-																exercise, except to obtain some advantage from it? But
-																who has any right to find fault with a man who chooses
-																to enjoy a pleasure that has no annoying consequences,
-																or one who avoids a pain that produces no resultant
-																pleasure?</div>
+															<div class="panel-body">
+																<a
+																	href="https://www.sciencepubco.com/index.php/ijet/article/view/11738/4565">
+																	[1]https://www.sciencepubco.com/index.php/ijet/article/view/11738/4565</a>
+																<br> <a
+																	href="https://storage.googleapis.com/skilledin/Tree0_ClassApplicationsDeveloper.png">[2]Application
+																	Developer Tree Visualization <br>
+																</a> <a href="skilledin.ml"> [3]http://www.skilledin.ml
+																	<br>
+																</a> <a href="https://github.com/SkilledIn-Labs/careerIn">[4]
+																	https://github.com/SkilledIn-Labs/careerIn <br>
+																</a> <a
+																	href="https://www.sciencepubco.com/index.php/ijet/article/view/11738">[5]
+																	https://www.sciencepubco.com/index.php/ijet/article/view/11738</a>
+																<br> <a
+																	href="https://github.com/KLGLUG/student-career-area-prediction-using-machine-learning">[6]https://github.com/KLGLUG/student-career-area-prediction-using-machine-learning</a>
+																<br> <a href="h2o.ai">[7]https://www.h2o.ai/ <br></a>
+																<a href="spring.io">[8] https://spring.io/ <br></a>
+																<a href="https://console.cloud.google.com/">[9]https://console.cloud.google.com/
+																	<br>
+																</a> <a href="https://www.freepik.com ">[10]https://www.freepik.com
+																	<br>
+																</a> <a href="https://graphviz.org/">[11]https://graphviz.org/
+																	<br>
+																</a> <a href="https://www.postman.com/">[12]https://www.postman.com/</a>
+															</div>
+															<br>
 														</div>
 													</div>
 													<!-- End Question 12 -->
-													<!-- Question 13 -->
-													<div class="panel">
-														<div class="panel-heading" id="question-13" role="tab">
-															<a class="panel-title" aria-controls="answer-13"
-																aria-expanded="false" data-bs-toggle="collapse"
-																href="#answer-13" data-parent="#accordion3"> Cras
-																venenatis lectus sit amet purus rutrum, non facilisis
-																ligula aliquet? </a>
-														</div>
-														<div class="panel-collapse collapse" id="answer-13"
-															aria-labelledby="question-13" role="tabpanel"
-															data-bs-parent="#category-4">
-															<div class="panel-body">I must explain to you how
-																all this mistaken idea of denouncing pleasure and
-																praising pain was born and I will give you a complete
-																account of the system, and expound the actual teachings
-																of the great explorer of the truth, the master-builder
-																of human happiness. No one rejects, dislikes, or avoids
-																pleasure itself, because it is pleasure, but because
-																those who do not know how to pursue pleasure rationally
-																encounter consequences that are extremely painful. Nor
-																again is there anyone who loves or pursues or desires to
-																obtain pain of itself, because it is pain, but because
-																occasionally circumstances occur in which toil and pain
-																can procure him some great pleasure. To take a trivial
-																example, which of us ever undertakes laborious physical
-																exercise, except to obtain some advantage from it? But
-																who has any right to find fault with a man who chooses
-																to enjoy a pleasure that has no annoying consequences,
-																or one who avoids a pain that produces no resultant
-																pleasure?</div>
-														</div>
-													</div>
-													<!-- End Question 13 -->
+
 												</div>
 											</div>
 											<!-- End Categroy 4 -->
@@ -757,12 +698,6 @@
 	<script src="public/js/pages/chat-popup.js"></script>
 	<script src="../assets/icons/feather-icons/feather.min.js"></script>
 
-	<!-- Rhythm Admin App -->
 	<script src="public/js/template.js"></script>
-
-
-
 </body>
-
-<!-- Mirrored from multipurposethemes.com/admin/rhythm-admin-template/bs5/main/sample_faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Jun 2021 10:09:34 GMT -->
 </html>
