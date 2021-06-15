@@ -288,10 +288,11 @@
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
+						<a target="_blank" href=""></a>
+							<a target="#" href="https://github.com/yashrockstar" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a target="_blank" href="https://api.whatsapp.com/send?phone=919304328315&text=Hi%20Yashwant%20Narayan" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/in/yashwant-narayan-27447b1bb/"class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
+							<a target="_blank" href=" mailto:yashrockstar441@gmail.com?subject=Skilledin&body=Hi" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>			
 						</div>
 						<h3 class="my-10"><a href="#">Yashwant Narayan</a></h3>
 						<h6 class="user-info mt-0 mb-10 text-fade">Full Stack Developer</h6>
@@ -310,12 +311,12 @@
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
+							<a target="_blank" href="https://github.com/SODA110" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a target="_blank" href="https://api.whatsapp.com/send?phone=917294002933&text=Hi%20Sodagar%20Hembrom" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/in/sodagar-hembrom-4363041aa/"class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
+							<a target="_blank" href=" mailto:sodagarhembrom06@gmail.com?subject=Skilledin&body=Hi" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
-						<h3 class="my-10"><a href="#">Sodagar Hemberom</a></h3>
+						<h3 class="my-10"><a href="#">Sodagar Hembrom</a></h3>
 						<h6 class="user-info mt-0 mb-10 text-fade">UI/UX & Graphics Designer</h6>
 					  </div>
 				  </div>
@@ -332,10 +333,10 @@
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
+							<a target="_blank" href="http://github.com/sidharth19th/" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a target="_blank" href="https://api.whatsapp.com/send?phone=919431798010&text=Hi%20Sidharth%20Gupta" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/in/sidharth19th/"class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
+							<a target="_blank" href=" mailto:sidharth19th@gmail.com?subject=Skilledin&body=Hi" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Sidharth Gupta</a></h3>
 						<h6 class="user-info mt-0 mb-10 text-fade">Data Scientist & Content Developer</h6>
@@ -354,10 +355,10 @@
 				  <div class="box-body">
 					  <div class="text-center">
 						<div class="user-contact list-inline text-center">
-							<a href="#" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
-							<a href="#" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
+							<a target="_blank" href="https://github.com/sonu-12871" class="btn btn-circle mb-5 btn-facebook"><i class="fab fa-github"></i></a>
+							<a target="_blank" href="https://api.whatsapp.com/send?phone=918294158565&text=Hi%20Sonu%20Tudu" class="btn btn-circle mb-5 btn-primary"><i class="fab fa-whatsapp"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/in/sonu-tudu-9328821b2/"class="btn btn-circle mb-5 btn-twitter"><i class="fab fa-linkedin"></i></a>
+							<a target="_blank" href=" mailto:sonutuduoffcial@gmail.com?subject=Skilledin&body=Hi" class="btn btn-circle mb-5 btn-warning"><i class="fa fa-envelope"></i></a>				
 						</div>
 						<h3 class="my-10"><a href="#">Sonu Tudu</a></h3>
 						<h6 class="user-info mt-0 mb-10 text-fade">QA ENGINEER & TESTING</h6>
