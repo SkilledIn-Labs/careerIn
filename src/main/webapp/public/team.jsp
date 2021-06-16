@@ -345,7 +345,7 @@
 				</div>
 			  </div>
 			  <div class="col-12 col-lg-4">
-				<div class="box ribbon-box">X$
+				<div class="box ribbon-box">
 				<div class="ribbon-two ribbon-two-info"><span>QA</span></div>
 				  <div class="box-header no-border p-0">				
 					<a href="#">
