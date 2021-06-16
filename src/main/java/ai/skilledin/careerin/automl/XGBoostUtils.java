@@ -29,7 +29,7 @@ public class XGBoostUtils {
 
 	@Autowired(required = false)
 	EasyPredictModelWrapper model;
-	private final String URL = "https://storage.googleapis.com/skilledin/final_model.zip";
+	private final String URL = "https://drive.google.com/uc?export=download&id=13rXMshrQmuU3I9tBsrU8ff6FpcMbQaI_";
 
 	public XGBoostUtils() {
 		super();

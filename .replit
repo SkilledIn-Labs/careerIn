@@ -1,0 +1,2 @@
+language = "java10"
+run = "mvn clean install && java -jar target/careerin-0.2.0.war"

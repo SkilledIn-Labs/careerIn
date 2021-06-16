@@ -18,7 +18,7 @@ import hex.genmodel.easy.EasyPredictModelWrapper;
 @SpringBootTest
 class AutoMLTest {
 	private static final Logger logger = LoggerFactory.getLogger(AutoMLTest.class);
-	private static final String URL = "https://storage.googleapis.com/skilledin/final_model.zip";
+	private static final String URL = "https://drive.google.com/uc?export=download&id=13rXMshrQmuU3I9tBsrU8ff6FpcMbQaI_";
 
 	@Test
 	void test() {
