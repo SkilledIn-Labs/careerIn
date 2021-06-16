@@ -78,7 +78,16 @@ public class RestControllerApi {
 		String roleName = autoML.getRoleNameFromRoleId(roleId);
 		session.setAttribute("roleName", roleName);
 		logger.info("prediction --> " + roleName);
-		roleModelDao.save(roleModel);
+
+		Runnable r1 = new Runnable() {
+
+			@Override
+			public void run() {
+				roleModelDao.save(roleModel);
+
+			}
+		};
+		new Thread(r1).start();
 
 		logger.info("saved ->" + roleModel);
 		PredictionResponseWrapper makePredictionWrapper = autoML.makePredictionWrapper(roleIdFromPredictionModel);
