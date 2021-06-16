@@ -30,6 +30,8 @@
 						class="social"><i class="fab fa-google-plus-g"></i></a> <a
 						href="/oauth2/authorization/linkdin" class="social"><i
 						class="fab fa-facebook-f"></i></a>
+
+					
 				</div>
 				<span>or use your email for registration</span> <input type="text"
 					placeholder="Name" name="name" id="name" /> <input type="email"
@@ -52,6 +54,11 @@
 				<span>or use your account</span> <input type="email" name="username"
 					placeholder="Email" /> <input type="password" name="password"
 					placeholder="Password" /> <a href="#">Forgot your password?</a>
+					
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
 				<button>Sign In</button>
 			</form>
 		</div>
@@ -157,6 +164,35 @@
                            js.src = "https://connect.facebook.net/en_US/sdk.js";
                            fjs.parentNode.insertBefore(js, fjs);
                          }(document, 'script', 'facebook-jssdk')); **/
+                         
+                         
+                         
+                         window.fbAsyncInit = function() {
+                        	    FB.init({
+                        	      appId      : '{your-app-id}',
+                        	      cookie     : true,
+                        	      xfbml      : true,
+                        	      version    : '{api-version}'
+                        	    });
+                        	      
+                        	    FB.AppEvents.logPageView();   
+                        	      
+                        	  };
+
+                        	  (function(d, s, id){
+                        	     var js, fjs = d.getElementsByTagName(s)[0];
+                        	     if (d.getElementById(id)) {return;}
+                        	     js = d.createElement(s); js.id = id;
+                        	     js.src = "https://connect.facebook.net/en_US/sdk.js";
+                        	     fjs.parentNode.insertBefore(js, fjs);
+                        	   }(document, 'script', 'facebook-jssdk'));
+                        	  
+
+                        	  function checkLoginState() {
+                        	    FB.getLoginStatus(function(response) {
+                        	      statusChangeCallback(response);
+                        	    });
+                        	  }
                     </script>
 
 
