@@ -5,6 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 import org.slf4j.Logger;
@@ -138,10 +141,18 @@ public class XGBoostUtils {
 
 	public PredictionResponseWrapper makePredictionWrapper(TreeMap<Double, String> roleIdFromPredictionModel) {
 		PredictionResponseWrapper wrapper = new PredictionResponseWrapper();
+		long start = System.currentTimeMillis();
 
+		List<Roles> findAll = rolesDao.findAll();
+
+		Map<String, Roles> map = new HashMap<String, Roles>();
+		for (Roles i : findAll)
+			map.put(i.getRid(), i);
+		long end = System.currentTimeMillis();
+		logger.debug("Time Taken to fetch All records" + (end - start) / 100);
 		for (Double value : roleIdFromPredictionModel.keySet()) {
 			String roleId = roleIdFromPredictionModel.get(value);
-			wrapper.getRoleName().add(rolesDao.findById(roleId).get());
+			wrapper.getRoleName().add(map.get(roleId));
 			wrapper.getValues().add(value);
 		}
 
