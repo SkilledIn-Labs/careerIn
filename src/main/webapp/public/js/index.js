@@ -176,7 +176,7 @@ $(".validation-wizard").steps({
         }, function() {
             window.location = "/dashboard";
         });
-    }, 1000);
+    }, 1500);
 	}
 }), $(".validation-wizard").validate({
 	ignore: "input[type=hidden]"
