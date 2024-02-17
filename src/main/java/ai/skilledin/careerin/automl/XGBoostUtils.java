@@ -1,6 +1,7 @@
 package ai.skilledin.careerin.automl;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -21,6 +22,8 @@ import hex.genmodel.easy.EasyPredictModelWrapper;
 import hex.genmodel.easy.RowData;
 import hex.genmodel.easy.prediction.MultinomialModelPrediction;
 
+import javax.annotation.PostConstruct;
+
 @Component
 public class XGBoostUtils {
 	private static final Logger logger = LoggerFactory.getLogger(XGBoostUtils.class);
@@ -29,19 +32,39 @@ public class XGBoostUtils {
 
 	@Autowired(required = false)
 	EasyPredictModelWrapper model;
-	private final String URL = "https://storage.googleapis.com/skilledin/final_model.zip";
+	private final String URL = "https://drive.google.com/uc?export=download&id=13rXMshrQmuU3I9tBsrU8ff6FpcMbQaI_";
 
-	public XGBoostUtils() {
-		super();
+
+	@PostConstruct
+	void init() {
 		String moelLocation = "/tmp/final_model.zip";
 
 		try {
 			model = new EasyPredictModelWrapper(MojoModel.load(moelLocation));
 			logger.info("successfully loaded the AI Model");
 		} catch (IOException e) {
+			// Path to the tmp folder in C drive
+			String tmpFolderPath = "/tmp";
+
+			// Create a File object for the tmp folder
+			File tmpFolder = new File(tmpFolderPath);
+
+			// Check if the tmp folder exists
+			if (!tmpFolder.exists()) {
+				// If it doesn't exist, create the tmp folder
+				boolean created = tmpFolder.mkdir();
+
+				if (created) {
+					logger.info("tmp folder created successfully.");
+				} else {
+					logger.error("Failed to create tmp folder.");
+				}
+			} else {
+				logger.info("tmp folder already exists.");
+			}
 			try (BufferedInputStream in = new BufferedInputStream(new URL(URL).openStream());
 					FileOutputStream fileOutputStream = new FileOutputStream(moelLocation)) {
-				byte dataBuffer[] = new byte[1024];
+				byte[] dataBuffer = new byte[1024];
 				int bytesRead;
 				while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
 					fileOutputStream.write(dataBuffer, 0, bytesRead);

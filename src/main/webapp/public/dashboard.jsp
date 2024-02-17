@@ -845,7 +845,7 @@ var options = {
 
                     // Inner
                     {
-                        name: 'Countries',
+                        name: 'Role',
                         type: 'pie',
                         selectedMode: 'single',
                         radius: [0, '40%'],
@@ -883,7 +883,7 @@ var options = {
 
                     // Outer
                     {
-                        name: 'Countries',
+                        name: 'Role',
                         type: 'pie',
                         radius: ['60%', '85%'],
 
